@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HimYatra — Explore Himachal, Experience Heaven</title>
+<meta name="description" content="Book Himalayan tours, hotels & cabs. Verified drivers across Himachal & Chandigarh. Call/WhatsApp: 7832042517">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0D1117;--deep:#111827;--pine:#0F4C3A;
+  --gold:#F59E0B;--gold-lt:#FCD34D;--mist:#8BA7C7;
+  --snow:#F0F6FF;--white:#FFFFFF;--card-bg:#161D2B;
+  --border:rgba(139,167,199,0.15);--green:#25D366;--red:#f87171;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--ink);color:var(--snow);min-height:100vh}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(13,17,23,0.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--white);letter-spacing:-0.5px;text-decoration:none}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--mist);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--white)}
+.nav-right{display:flex;gap:10px;align-items:center}
+.nav-login{padding:9px 16px;background:transparent;color:var(--snow);border:1px solid var(--border);border-radius:50px;font-weight:600;font-size:0.8rem;cursor:pointer;transition:border-color 0.2s}
+.nav-login:hover{border-color:var(--gold);color:var(--gold)}
+.nav-wa{width:38px;height:38px;background:var(--green);color:#fff;border:none;border-radius:50%;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.nav-cta{padding:9px 20px;background:var(--gold);color:var(--ink);border:none;border-radius:50px;font-weight:600;font-size:0.8rem;cursor:pointer;transition:background 0.2s}
+.nav-cta:hover{background:var(--gold-lt)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 0;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1643138769032-34c831015c62?w=1600&q=85') center/cover no-repeat;filter:brightness(0.35)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,17,23,0.3) 0%,rgba(13,17,23,0.7) 100%)}
+.stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,0.6) 0%,transparent 100%),radial-gradient(1px 1px at 25% 35%,rgba(255,255,255,0.4) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 40% 10%,rgba(255,255,255,0.7) 0%,transparent 100%),radial-gradient(1px 1px at 70% 20%,rgba(255,255,255,0.5) 0%,transparent 100%),radial-gradient(2px 2px at 85% 8%,rgba(255,255,255,0.8) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 60% 5%,rgba(255,255,255,0.6) 0%,transparent 100%)}
+.hero-content{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(245,158,11,0.3);border-radius:50px;padding:6px 16px;margin-bottom:28px}
+.eyebrow::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,6.5rem);font-weight:900;line-height:1.05;letter-spacing:-0.03em;color:var(--white);max-width:900px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero-sub{margin-top:20px;font-size:1.125rem;font-weight:300;color:rgba(240,246,255,0.85);max-width:460px;line-height:1.7}
+.hero-actions{margin-top:40px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center}
+.btn-primary{padding:15px 36px;background:var(--gold);color:var(--ink);border:none;border-radius:50px;font-weight:700;font-size:1rem;cursor:pointer;transition:background 0.2s,transform 0.15s,box-shadow 0.2s}
+.btn-primary:hover{background:var(--gold-lt);transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,158,11,0.35)}
+.btn-ghost{padding:14px 32px;background:transparent;color:var(--snow);border:1px solid rgba(255,255,255,0.3);border-radius:50px;font-weight:500;font-size:1rem;cursor:pointer;transition:border-color 0.2s;text-decoration:none;display:inline-block}
+.btn-ghost:hover{border-color:var(--mist)}
+.trust{margin-top:60px;display:flex;gap:40px;align-items:center;flex-wrap:wrap;justify-content:center;padding-bottom:60px}
+.trust-item{text-align:center}
+.trust-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--white)}
+.trust-lbl{font-size:0.75rem;color:var(--mist);letter-spacing:0.08em;margin-top:2px}
+.trust-sep{width:1px;height:40px;background:var(--border)}
+.mountain-divider{width:100%;display:block;margin-top:-2px;line-height:0}
+
+/* SEARCH */
+.search-section{background:var(--deep);padding:0 24px 64px}
+.search-card{max-width:900px;margin:-32px auto 0;background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:28px 32px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:16px;align-items:end;box-shadow:0 24px 60px rgba(0,0,0,0.5)}
+.search-field label{display:block;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--mist);margin-bottom:8px}
+.search-field input,.search-field select{width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--white);font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s;-webkit-appearance:none}
+.search-field input:focus,.search-field select:focus{border-color:var(--gold)}
+.search-field select option{background:var(--card-bg)}
+.btn-search{padding:12px 28px;background:var(--gold);color:var(--ink);border:none;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer;white-space:nowrap;transition:background 0.2s}
+.btn-search:hover{background:var(--gold-lt)}
+
+/* SECTIONS */
+section{background:var(--deep);padding:80px 48px}
+.section-eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:var(--white);line-height:1.2;max-width:520px}
+.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:16px}
+.link-see-all{font-size:0.875rem;font-weight:500;color:var(--gold);text-decoration:none}
+
+/* DESTINATION / DRIVER GRID CARDS */
+.dest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.dest-card{position:relative;border-radius:16px;overflow:hidden;height:320px;cursor:pointer;transition:transform 0.3s,box-shadow 0.3s}
+.dest-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+.dest-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s}
+.dest-card:hover img{transform:scale(1.06)}
+.dest-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,17,23,0.92) 0%,rgba(13,17,23,0.2) 60%,transparent 100%)}
+.dest-info{position:absolute;bottom:0;left:0;right:0;padding:24px}
+.dest-badge{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:50px;background:var(--gold);color:var(--ink);margin-bottom:10px}
+.dest-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:4px}
+.dest-sub{font-size:0.8rem;color:var(--mist)}
+.dest-price{position:absolute;top:16px;right:16px;background:rgba(13,17,23,0.8);border:1px solid var(--border);border-radius:10px;padding:8px 14px;text-align:right}
+.dest-price .amt{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold)}
+.dest-price .lbl{font-size:0.65rem;color:var(--mist)}
+
+/* FEATURES */
+.features-section{background:var(--ink)}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:32px;margin-top:48px}
+.feature-item{text-align:center}
+.feature-icon{font-size:2rem;width:60px;height:60px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.feature-title{font-weight:600;font-size:0.95rem;color:var(--white);margin-bottom:8px}
+.feature-desc{font-size:0.85rem;color:var(--mist);line-height:1.6}
+
+/* CALCULATOR (FareBot) */
+.calc-card{max-width:820px;margin:0 auto;background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:32px}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;margin-bottom:20px}
+.calc-field label{display:block;font-size:0.68rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--mist);margin-bottom:6px}
+.btn-calc{width:100%;padding:14px;background:var(--gold);color:var(--ink);border:none;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer;transition:background 0.2s}
+.btn-calc:hover{background:var(--gold-lt)}
+.calc-result-box{display:none;margin-top:20px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:12px;padding:16px}
+.calc-row{display:flex;justify-content:space-between;padding:9px 0;font-size:0.85rem;color:var(--snow);border-bottom:1px solid var(--border)}
+.calc-row:last-child{border-bottom:none}
+.calc-total{font-weight:700;font-size:1.1rem;color:var(--gold);padding-top:14px;margin-top:4px;border-top:1px solid var(--border)}
+.calc-note{font-size:0.75rem;color:var(--mist);margin-top:14px;line-height:1.6}
+
+/* PAYMENT */
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:800px;margin:0 auto}
+.payment-card{background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:32px;text-align:center}
+.payment-card h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);margin-bottom:8px}
+.payment-card p{font-size:0.85rem;color:var(--mist);margin-bottom:24px;line-height:1.6}
+.qr-box{width:160px;height:160px;margin:0 auto 16px;border-radius:12px;overflow:hidden;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;background:#fff}
+.upi-id{font-size:0.85rem;color:var(--gold);font-weight:600;margin-top:8px}
+.btn-pay{width:100%;padding:14px;background:var(--gold);color:var(--ink);border:none;border-radius:12px;font-weight:700;font-size:0.95rem;cursor:pointer;transition:background 0.2s;margin-top:12px;display:block;text-decoration:none}
+.btn-pay:hover{background:var(--gold-lt)}
+.btn-pay-wa{width:100%;padding:14px;background:var(--green);color:#fff;border:none;border-radius:12px;font-weight:700;font-size:0.95rem;cursor:pointer;transition:background 0.2s;margin-top:12px;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+.btn-pay-wa:hover{background:#1ebe57}
+.razorpay-note{font-size:0.72rem;color:var(--mist);margin-top:12px}
+
+/* AI EMPLOYEES (shared pattern) */
+.ai-employees-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;margin-top:48px}
+.employee-card{background:var(--card-bg);border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s}
+.employee-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4)}
+.emp-header{padding:24px 24px 16px;display:flex;align-items:center;gap:16px}
+.emp-avatar{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.emp-avatar.social{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.emp-avatar.legal{background:linear-gradient(135deg,#1a3a5c,#2d6a8f)}
+.emp-avatar.travel{background:linear-gradient(135deg,#0F4C3A,#F59E0B)}
+.emp-avatar.resolve{background:linear-gradient(135deg,#b91c1c,#f59e0b)}
+.emp-avatar.fleet{background:linear-gradient(135deg,#1e3a5f,#0F4C3A)}
+.emp-avatar.fare{background:linear-gradient(135deg,#92400e,#F59E0B)}
+.emp-avatar.boss{background:linear-gradient(135deg,#7c3aed,#F59E0B)}
+.emp-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--white)}
+.emp-role{font-size:0.72rem;color:var(--mist);letter-spacing:0.05em;text-transform:uppercase;margin-top:2px}
+.emp-dot{display:inline-block;width:6px;height:6px;background:#4ade80;border-radius:50%;margin-right:5px;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.emp-status{font-size:0.72rem;color:#4ade80;margin-top:4px}
+.emp-messages{padding:0 24px 16px;display:flex;flex-direction:column;gap:10px;max-height:180px;overflow-y:auto}
+.emp-msg-bot{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:4px 12px 12px 12px;padding:10px 14px;font-size:0.82rem;color:var(--snow);line-height:1.5}
+.emp-msg-user{align-self:flex-end;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);border-radius:12px 4px 12px 12px;padding:10px 14px;font-size:0.82rem;color:var(--snow);line-height:1.5}
+.emp-input-row{padding:12px 24px 20px;display:flex;gap:10px}
+.emp-input{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:50px;padding:10px 16px;color:var(--white);font-size:0.82rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s}
+.emp-input:focus{border-color:var(--gold)}
+.emp-input::placeholder{color:rgba(139,167,199,0.5)}
+.emp-send{padding:10px 18px;background:var(--gold);color:var(--ink);border:none;border-radius:50px;font-weight:700;font-size:0.8rem;cursor:pointer;white-space:nowrap}
+.emp-send:hover{background:var(--gold-lt)}
+.ai-banner{max-width:700px;margin:0 auto 8px;text-align:center;font-size:0.8rem;color:var(--mist);background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-radius:50px;padding:8px 20px}
+
+/* AI TRAVEL ASSISTANT (full width) */
+.ai-card{max-width:720px;margin:0 auto;background:var(--card-bg);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.ai-header{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+.ai-messages{padding:24px;display:flex;flex-direction:column;gap:16px;min-height:160px;max-height:280px;overflow-y:auto}
+.msg{max-width:85%}
+.msg-bot{background:rgba(15,76,58,0.2);border:1px solid rgba(15,76,58,0.4);border-radius:4px 16px 16px 16px;padding:12px 16px;font-size:0.875rem;color:var(--snow);line-height:1.6}
+.msg-user{align-self:flex-end;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.25);border-radius:16px 4px 16px 16px;padding:12px 16px;font-size:0.875rem;color:var(--snow);line-height:1.6}
+.ai-input-row{padding:16px 24px;border-top:1px solid var(--border);display:flex;gap:12px;align-items:center}
+.ai-input{flex:1;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:50px;padding:12px 20px;color:var(--white);font-size:0.875rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s}
+.ai-input:focus{border-color:var(--gold)}
+.btn-send{padding:12px 22px;background:var(--gold);color:var(--ink);border:none;border-radius:50px;font-weight:700;font-size:0.875rem;cursor:pointer}
+.btn-send:hover{background:var(--gold-lt)}
+
+/* DRIVERS SECTION (with bg photo) */
+.driver-section{position:relative;padding:0;overflow:hidden}
+.driver-section-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1652501834567-937de29c4533?w=1600&q=80') center/cover;filter:brightness(0.28)}
+.driver-section-overlay{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep) 0%,rgba(17,24,39,0.88) 12%,rgba(17,24,39,0.93) 100%)}
+.driver-section-content{position:relative;z-index:2;padding:80px 48px}
+.driver-card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:20px;transition:transform 0.25s,box-shadow 0.25s}
+.driver-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4)}
+.driver-card-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.driver-avatar{width:48px;height:48px;border-radius:50%;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.25);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.driver-name{font-weight:700;color:var(--white);font-size:0.95rem}
+.driver-city{font-size:0.75rem;color:var(--mist)}
+.driver-verified{display:inline-flex;align-items:center;gap:4px;font-size:0.7rem;font-weight:600;color:#4ade80;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.25);border-radius:50px;padding:3px 10px;margin-bottom:12px}
+.driver-details{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.driver-detail-row{display:flex;justify-content:space-between;font-size:0.8rem;color:var(--mist)}
+.driver-detail-row span:last-child{color:var(--snow);font-weight:500}
+.btn-book-driver{width:100%;padding:10px;background:transparent;color:var(--gold);border:1px solid rgba(245,158,11,0.4);border-radius:50px;font-weight:600;font-size:0.8rem;cursor:pointer;transition:background 0.2s,color 0.2s}
+.btn-book-driver:hover{background:var(--gold);color:var(--ink)}
+.sample-warning{font-size:0.78rem;color:var(--gold);margin-top:8px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;padding:8px 14px;display:inline-block}
+
+/* DRIVER PORTAL CTA */
+.driver-cta-card{max-width:700px;margin:0 auto;text-align:center;background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:40px}
+.driver-cta-card h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--white);margin-bottom:12px}
+.driver-cta-card p{color:var(--mist);font-size:0.9rem;line-height:1.7;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto}
+
+/* SOCIAL SHARE */
+.share-section{background:var(--ink);padding:60px 48px}
+.share-card{max-width:600px;margin:0 auto;text-align:center}
+.share-title{font-family:'Playfair Display',serif;font-size:2rem;color:var(--white);margin-bottom:8px}
+.share-sub{font-size:0.9rem;color:var(--mist);margin-bottom:32px}
+.share-link-box{display:flex;gap:12px;background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:12px 16px;margin-bottom:28px;align-items:center}
+.share-link-box input{flex:1;background:transparent;border:none;color:var(--snow);font-size:0.875rem;font-family:'Inter',sans-serif;outline:none}
+.btn-copy{padding:8px 18px;background:var(--gold);color:var(--ink);border:none;border-radius:8px;font-weight:700;font-size:0.8rem;cursor:pointer;white-space:nowrap}
+.social-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.social-btn{display:flex;align-items:center;gap:8px;padding:11px 20px;border-radius:50px;font-weight:600;font-size:0.85rem;cursor:pointer;border:none;text-decoration:none;transition:transform 0.15s,opacity 0.2s}
+.social-btn:hover{transform:translateY(-2px);opacity:0.9}
+.social-btn.whatsapp{background:#25D366;color:#fff}
+.social-btn.instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff}
+.social-btn.facebook{background:#1877F2;color:#fff}
+.social-btn.twitter{background:#000;color:#fff;border:1px solid #333}
+
+/* OWNER SECTION */
+.owner-section{position:relative;padding:0;overflow:hidden}
+.owner-section-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1636800877579-b69375ae9532?w=1600&q=80') center/cover;filter:brightness(0.25)}
+.owner-section-overlay{position:absolute;inset:0;background:linear-gradient(180deg,var(--deep) 0%,rgba(17,24,39,0.8) 30%,rgba(17,24,39,0.92) 100%)}
+.owner-section-content{position:relative;z-index:2;padding:80px 48px}
+.owner-card{max-width:700px;margin:0 auto;display:flex;gap:28px;align-items:center;text-align:left}
+.owner-photo{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--pine),var(--gold));display:flex;align-items:center;justify-content:center;font-size:2.5rem;flex-shrink:0;border:3px solid var(--gold)}
+
+/* OWNER DASHBOARD */
+.dashboard-stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;margin-bottom:24px}
+.stat-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:20px 12px;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold)}
+.stat-lbl{font-size:0.7rem;color:var(--mist);margin-top:4px;letter-spacing:0.03em}
+.dashboard-activity{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;padding:20px}
+.activity-item{font-size:0.82rem;color:var(--snow);padding:10px 0;border-bottom:1px solid var(--border)}
+.activity-item:last-child{border-bottom:none}
+
+/* ADMIN PANEL (separate interface) */
+#adminApp{font-family:'Inter',sans-serif}
+.admin-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 32px;background:rgba(13,17,23,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.admin-nav-left{display:flex;align-items:center;gap:14px}
+.admin-role-tag{font-size:0.75rem;color:var(--mist);border-left:1px solid var(--border);padding-left:14px}
+.admin-wrap{padding:100px 32px 80px;max-width:1200px;margin:0 auto}
+.admin-actions{display:flex;gap:12px;margin:24px 0;flex-wrap:wrap}
+.btn-admin{padding:12px 22px;border:none;border-radius:10px;font-weight:700;font-size:0.85rem;cursor:pointer;transition:background 0.2s}
+.btn-admin.gold{background:var(--gold);color:var(--ink)}
+.btn-admin.gold:hover{background:var(--gold-lt)}
+.btn-admin.green{background:var(--green);color:#fff}
+.btn-admin.green:hover{background:#1ebe57}
+.admin-tabs{display:flex;gap:6px;margin:28px 0 20px;flex-wrap:wrap;background:rgba(255,255,255,0.03);padding:6px;border-radius:12px;width:fit-content}
+.admin-panel{display:none}
+.admin-panel.active{display:block}
+.admin-table-wrap{overflow-x:auto;border-radius:14px;border:1px solid var(--border)}
+.admin-table{width:100%;border-collapse:collapse;background:var(--card-bg)}
+.admin-table th{text-align:left;padding:12px 16px;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--mist);background:rgba(255,255,255,0.03);border-bottom:1px solid var(--border);white-space:nowrap}
+.admin-table td{padding:12px 16px;font-size:0.83rem;color:var(--snow);border-bottom:1px solid var(--border);white-space:nowrap}
+.admin-table tr:last-child td{border-bottom:none}
+.admin-empty{padding:40px 20px;text-align:center;color:var(--mist);font-size:0.85rem;background:var(--card-bg);border:1px solid var(--border);border-radius:14px}
+.badge-pending{background:rgba(245,158,11,0.15);color:var(--gold);padding:3px 10px;border-radius:50px;font-size:0.7rem;font-weight:600;white-space:nowrap}
+.badge-verified{background:rgba(74,222,128,0.15);color:#4ade80;padding:3px 10px;border-radius:50px;font-size:0.7rem;font-weight:600;white-space:nowrap}
+.badge-open{background:rgba(248,113,113,0.15);color:#f87171;padding:3px 10px;border-radius:50px;font-size:0.7rem;font-weight:600;white-space:nowrap}
+.badge-resolved{background:rgba(74,222,128,0.15);color:#4ade80;padding:3px 10px;border-radius:50px;font-size:0.7rem;font-weight:600;white-space:nowrap}
+.btn-mini{padding:6px 14px;background:transparent;border:1px solid var(--border);border-radius:50px;color:var(--snow);font-size:0.75rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn-mini:hover{border-color:var(--gold);color:var(--gold)}
+.admin-security-note{margin-top:32px;font-size:0.78rem;color:var(--mist);line-height:1.7;background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-radius:12px;padding:16px 20px}
+@media(max-width:768px){.admin-wrap{padding:90px 16px 60px}.admin-nav{padding:14px 16px}.admin-role-tag{display:none}}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px;margin:0 auto}
+.contact-info h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--white);margin-bottom:16px}
+.contact-info p{font-size:0.9rem;color:var(--mist);line-height:1.7;margin-bottom:28px}
+.contact-item{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.contact-icon{width:40px;height:40px;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.contact-text{font-size:0.875rem;color:var(--snow)}
+.contact-text a{color:var(--gold);text-decoration:none}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.cf-input{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--white);font-size:0.875rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s}
+.cf-input:focus{border-color:var(--gold)}
+textarea.cf-input{resize:vertical;min-height:100px}
+.btn-submit{padding:14px;background:var(--gold);color:var(--ink);border:none;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer}
+.btn-submit:hover{background:var(--gold-lt)}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:1px solid var(--border);padding:48px}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand p{font-size:0.85rem;color:var(--mist);line-height:1.7;margin-top:12px;max-width:280px}
+.footer-col h4{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.footer-col a{display:block;font-size:0.875rem;color:var(--mist);text-decoration:none;margin-bottom:8px;transition:color 0.2s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:24px;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--white)}
+.footer-logo span{color:var(--gold)}
+.footer-copy{color:var(--mist);font-size:0.8rem}
+
+/* FLOATING WA */
+.float-wa{position:fixed;bottom:28px;right:28px;z-index:300;width:56px;height:56px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;text-decoration:none;font-size:1.6rem;transition:transform 0.2s,box-shadow 0.2s}
+.float-share{position:fixed;bottom:94px;right:28px;z-index:300;width:48px;height:48px;background:var(--gold);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(245,158,11,0.4);cursor:pointer;font-size:1.3rem;color:var(--ink);transition:transform 0.2s,box-shadow 0.2s}
+.float-share:hover{transform:scale(1.1)}
+.float-wa:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,0.5)}
+
+/* MODAL (shared) */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:500;align-items:center;justify-content:center;padding:24px}
+.modal-overlay.show{display:flex}
+.modal{background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:32px;max-width:480px;width:100%;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--mist);font-size:1.4rem;cursor:pointer}
+.modal h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--white);margin-bottom:6px}
+.modal p{font-size:0.85rem;color:var(--mist);margin-bottom:24px}
+.modal-tour-name{display:inline-block;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:6px 14px;font-size:0.85rem;color:var(--gold);font-weight:600;margin-bottom:20px}
+.modal-form{display:flex;flex-direction:column;gap:12px}
+.modal-input{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--white);font-size:0.875rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s;width:100%}
+.modal-input:focus{border-color:var(--gold)}
+.modal-input::placeholder{color:rgba(139,167,199,0.5)}
+.modal-divider{text-align:center;color:var(--mist);font-size:0.8rem;margin:4px 0;position:relative}
+.modal-divider::before,.modal-divider::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:var(--border)}
+.modal-divider::before{left:0}
+.modal-divider::after{right:0}
+.btn-book-wa{width:100%;padding:14px;background:var(--green);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:0.95rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;margin-top:4px}
+.payment-methods{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.pm-btn{padding:12px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;color:var(--snow);font-size:0.8rem;font-weight:600;cursor:pointer;text-align:center;transition:border-color 0.2s}
+.pm-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* AUTH TABS */
+.auth-tabs{display:flex;gap:6px;margin-bottom:20px;background:rgba(255,255,255,0.04);border-radius:10px;padding:4px}
+.auth-tab{flex:1;padding:10px;background:transparent;border:none;border-radius:8px;color:var(--mist);font-weight:600;font-size:0.85rem;cursor:pointer;transition:background 0.2s,color 0.2s}
+.auth-tab.active{background:var(--gold);color:var(--ink)}
+.auth-msg{font-size:0.8rem;min-height:18px;text-align:center;font-weight:500}
+.auth-demo-note{font-size:0.7rem;color:var(--mist);text-align:center;margin-top:4px;line-height:1.5}
+
+@media(max-width:768px){
+  nav{padding:14px 16px}
+  .nav-links{display:none}
+  .nav-login{padding:8px 12px;font-size:0.75rem}
+  section{padding:60px 20px}
+  .driver-section-content{padding:60px 20px}
+  .owner-section-content{padding:60px 20px}
+  .search-card{grid-template-columns:1fr}
+  .payment-grid,.contact-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+  footer{padding:32px 20px}
+  .share-section{padding:60px 20px}
+  .trust-sep{display:none}
+  .owner-card{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.tour-card,.btn-primary,.dest-card,.driver-card{transition:none}.emp-dot{animation:none}}
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/917832042517?text=Namaste!%20I%20want%20to%20book%20a%20tour%20with%20HimYatra." class="float-wa" target="_blank" title="Chat on WhatsApp">💬</a>
+<button class="float-share" onclick="nativeShare()" title="Share HimYatra">🔗</button>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModalEl('bookingModal')">✕</button>
+    <h2>Book Your Trip</h2>
+    <p>Fill details below — we'll confirm within 2 hours.</p>
+    <div class="modal-tour-name" id="modalTourName">Ladakh Grand Circuit</div>
+    <div class="modal-form">
+      <input type="text" class="modal-input" id="bkName" placeholder="Your Full Name">
+      <input type="tel" class="modal-input" id="bkPhone" placeholder="Mobile Number">
+      <input type="email" class="modal-input" id="bkEmail" placeholder="Email Address">
+      <input type="number" class="modal-input" id="bkTravellers" placeholder="No. of Travellers" min="1">
+      <input type="date" class="modal-input" id="bkDate">
+      <div class="modal-divider">Pay & Confirm</div>
+      <div class="payment-methods">
+        <button class="pm-btn" onclick="payUPI()">📱 UPI / QR Code</button>
+        <button class="pm-btn" onclick="payWA()">💳 Pay via WhatsApp</button>
+      </div>
+      <button class="btn-book-wa" onclick="confirmBooking()">💬 Confirm & Book via WhatsApp</button>
+      <div class="auth-msg" id="bkMsg"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTOMER AUTH MODAL -->
+<div class="modal-overlay" id="customerAuthModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModalEl('customerAuthModal')">✕</button>
+    <h2>Customer Account</h2>
+    <p>Sign up or log in to track your bookings.</p>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="custTabLogin" onclick="switchAuthTab('customer','login')">Log In</button>
+      <button class="auth-tab" id="custTabSignup" onclick="switchAuthTab('customer','signup')">Sign Up</button>
+    </div>
+    <div class="modal-form">
+      <input type="text" class="modal-input auth-signup-only-customer" id="custName" placeholder="Full Name" style="display:none">
+      <input type="email" class="modal-input" id="custEmail" placeholder="Email Address">
+      <input type="tel" class="modal-input auth-signup-only-customer" id="custPhone" placeholder="Mobile Number" style="display:none">
+      <input type="password" class="modal-input" id="custPassword" placeholder="Password">
+      <div class="auth-msg" id="custAuthMsg"></div>
+      <button class="btn-submit" id="custAuthSubmitBtn" onclick="handleCustomerAuth()">Log In</button>
+      <div class="auth-demo-note">🔒 Runs on real Firebase login once FIREBASE_CONFIG is filled in — until then, this is demo-only preview login.</div>
+    </div>
+  </div>
+</div>
+
+<!-- DRIVER AUTH MODAL -->
+<div class="modal-overlay" id="driverAuthModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModalEl('driverAuthModal')">✕</button>
+    <h2>Driver Portal</h2>
+    <p>Join HimYatra's verified driver network.</p>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="drvTabLogin" onclick="switchAuthTab('driver','login')">Log In</button>
+      <button class="auth-tab" id="drvTabSignup" onclick="switchAuthTab('driver','signup')">Sign Up</button>
+    </div>
+    <div class="modal-form">
+      <input type="text" class="modal-input auth-signup-only-driver" id="drvName" placeholder="Full Name" style="display:none">
+      <input type="tel" class="modal-input" id="drvPhone" placeholder="Mobile Number">
+      <input type="email" class="modal-input" id="drvEmail" placeholder="Email Address (for login)">
+      <select class="modal-input auth-signup-only-driver" id="drvCity" style="display:none">
+        <option value="">Select Base City</option>
+        <option>Shimla</option><option>Manali</option><option>Kullu</option><option>Chandigarh</option><option>Dharamshala</option><option>Kaza / Spiti</option>
+      </select>
+      <select class="modal-input auth-signup-only-driver" id="drvVehicle" style="display:none">
+        <option value="">Select Vehicle Type</option>
+        <option>Sedan (Swift Dzire / Etios)</option><option>SUV (Innova Crysta)</option><option>Tempo Traveller (12-seater)</option><option>Tempo Traveller (17-seater)</option><option>4x4 (Scorpio / Thar)</option>
+      </select>
+      <input type="text" class="modal-input auth-signup-only-driver" id="drvLicense" placeholder="Driving License Number" style="display:none">
+      <input type="password" class="modal-input" id="drvPassword" placeholder="Password">
+      <div class="auth-msg" id="drvAuthMsg"></div>
+      <button class="btn-submit" id="drvAuthSubmitBtn" onclick="handleDriverAuth()">Log In</button>
+      <div class="auth-demo-note">🔒 Runs on real Firebase login once FIREBASE_CONFIG is filled in. We collect License Number for verification, not Aadhaar, to keep driver data safe on a public site.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN ACCESS MODAL (in-page, since native prompt() is unreliable in embedded previews) -->
+<div class="modal-overlay" id="adminPasscodeModal">
+  <div class="modal" style="max-width:360px">
+    <button class="modal-close" onclick="closeModalEl('adminPasscodeModal')">✕</button>
+    <h2>🔐 Admin Access</h2>
+    <p id="adminAccessDesc">Enter the admin passcode to open the Control Panel.</p>
+    <div class="modal-form">
+      <input type="password" class="modal-input" id="adminPasscodeInput" placeholder="Passcode">
+      <input type="email" class="modal-input" id="adminEmailInput" placeholder="Admin Email" style="display:none">
+      <input type="password" class="modal-input" id="adminFbPasswordInput" placeholder="Password" style="display:none">
+      <div class="auth-msg" id="adminPasscodeMsg"></div>
+      <button class="btn-submit" id="adminAccessBtn" onclick="checkAdminPasscode()">Enter Admin Panel</button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">Him<span>Yatra</span></a>
+  <ul class="nav-links">
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#calculator">Trip Cost</a></li>
+    <li><a href="#drivers">Drivers</a></li>
+    <li><a href="#payment">Payment</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-login" id="navLoginBtn" onclick="openModalEl('customerAuthModal')">👤 Login</button>
+    <a href="https://wa.me/917832042517" class="nav-wa" target="_blank">💬</a>
+    <button class="nav-cta" onclick="openModal('Himalayan Tour')">Plan a Trip</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="stars"></div>
+  <div class="hero-content">
+    <div class="eyebrow">🏔 Himachal Pradesh &amp; Ladakh</div>
+    <h1>Where Roads End,<br><em>Adventure</em> Begins</h1>
+    <p class="hero-sub">Curated mountain journeys — handpicked stays, verified cabs, and expert-led treks across the Indian Himalayas.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal('Himalayan Tour')">Book Now</button>
+      <a href="#destinations" class="btn-ghost">Explore Destinations</a>
+    </div>
+    <div class="trust">
+      <div class="trust-item"><div class="trust-num">12,400+</div><div class="trust-lbl">Travellers Served</div></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><div class="trust-num">48</div><div class="trust-lbl">Unique Destinations</div></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><div class="trust-num">4.9★</div><div class="trust-lbl">Average Rating</div></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><div class="trust-num">₹0</div><div class="trust-lbl">Booking Fees</div></div>
+    </div>
+  </div>
+</section>
+
+<svg class="mountain-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none">
+  <defs><linearGradient id="mg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0F4C3A"/><stop offset="50%" stop-color="#111827"/><stop offset="100%" stop-color="#0F4C3A"/></linearGradient></defs>
+  <polygon fill="url(#mg)" points="0,100 0,70 120,20 240,60 360,10 480,55 600,5 720,50 840,15 960,65 1080,25 1200,70 1320,30 1440,60 1440,100"/>
+  <polygon fill="rgba(245,158,11,0.05)" points="0,100 0,85 180,45 360,80 540,35 720,75 900,40 1080,80 1260,50 1440,75 1440,100"/>
+</svg>
+
+<div class="search-section">
+  <div class="search-card">
+    <div class="search-field"><label>Destination</label><select><option>Ladakh</option><option>Manali</option><option>Spiti Valley</option><option>Kasol</option><option>Dharamshala</option><option>Shimla</option></select></div>
+    <div class="search-field"><label>Travel Date</label><input type="date"></div>
+    <div class="search-field"><label>Travellers</label><select><option>1 Person</option><option>2 People</option><option>3–5 People</option><option>Group (6+)</option></select></div>
+    <button class="btn-search" onclick="openModal('Custom Tour')">Search</button>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+  <div class="section-header">
+    <div><div class="section-eyebrow">Real Locations, Real Photos</div><h2 class="section-title">Top Mountain Destinations</h2></div>
+    <a href="#" class="link-see-all">View all →</a>
+  </div>
+  <div class="dest-grid">
+    <div class="dest-card" onclick="openModal('Ladakh Grand Circuit — ₹24,999')">
+      <img src="https://images.unsplash.com/photo-1674187219704-be3cd35a80b7?w=600&q=85" alt="Pangong Lake Ladakh" loading="lazy">
+      <div class="dest-overlay"></div><div class="dest-price"><div class="amt">₹24,999</div><div class="lbl">per person</div></div>
+      <div class="dest-info"><span class="dest-badge">Bestseller</span><div class="dest-name">Ladakh</div><div class="dest-sub">Pangong Lake · Nubra Valley · 7D/6N</div></div>
+    </div>
+    <div class="dest-card" onclick="openModal('Manali Snow Retreat — ₹15,499')">
+      <img src="https://images.unsplash.com/photo-1606667544139-81e47935d769?w=600&q=85" alt="Manali Mountains" loading="lazy">
+      <div class="dest-overlay"></div><div class="dest-price"><div class="amt">₹15,499</div><div class="lbl">per person</div></div>
+      <div class="dest-info"><span class="dest-badge">Winter Special</span><div class="dest-name">Manali</div><div class="dest-sub">Solang Valley · Rohtang Pass · 5D/4N</div></div>
+    </div>
+    <div class="dest-card" onclick="openModal('Spiti Cold Desert — ₹29,999')">
+      <img src="https://images.unsplash.com/photo-1746038335222-c6d6db685c45?w=600&q=85" alt="Spiti Valley" loading="lazy">
+      <div class="dest-overlay"></div><div class="dest-price"><div class="amt">₹29,999</div><div class="lbl">per person</div></div>
+      <div class="dest-info"><span class="dest-badge">Off-Beat</span><div class="dest-name">Spiti Valley</div><div class="dest-sub">Kaza · Key Monastery · 9D/8N</div></div>
+    </div>
+    <div class="dest-card" onclick="openModal('Kasol Parvati Valley — ₹8,999')">
+      <img src="https://images.unsplash.com/photo-1612638039814-1a67ea727114?w=600&q=85" alt="Kasol Parvati Valley" loading="lazy">
+      <div class="dest-overlay"></div><div class="dest-price"><div class="amt">₹8,999</div><div class="lbl">per person</div></div>
+      <div class="dest-info"><span class="dest-badge">Budget Pick</span><div class="dest-name">Kasol</div><div class="dest-sub">Kheerganga Trek · Chalal · 4D/3N</div></div>
+    </div>
+    <div class="dest-card" onclick="openModal('Dharamshala & McLeod Ganj — ₹11,499')">
+      <img src="https://images.unsplash.com/photo-1683177511074-06295930b77c?w=600&q=85" alt="Dharamshala McLeod Ganj" loading="lazy">
+      <div class="dest-overlay"></div><div class="dest-price"><div class="amt">₹11,499</div><div class="lbl">per person</div></div>
+      <div class="dest-info"><span class="dest-badge">Peaceful</span><div class="dest-name">Dharamshala</div><div class="dest-sub">McLeod Ganj · Triund Trek · 4D/3N</div></div>
+    </div>
+    <div class="dest-card" onclick="openModal('Shimla Heritage Tour — ₹9,999')">
+      <img src="https://images.unsplash.com/photo-1657894736581-ccc35d62d9e2?w=600&q=85" alt="Shimla Mountains" loading="lazy">
+      <div class="dest-overlay"></div><div class="dest-price"><div class="amt">₹9,999</div><div class="lbl">per person</div></div>
+      <div class="dest-info"><span class="dest-badge">Family Favourite</span><div class="dest-name">Shimla</div><div class="dest-sub">Mall Road · Kufri · Toy Train · 3D/2N</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div style="text-align:center"><div class="section-eyebrow" style="text-align:center">Why HimYatra</div><h2 class="section-title" style="margin:0 auto;text-align:center;max-width:400px">Travel Smarter, Not Harder</h2></div>
+  <div class="features-grid">
+    <div class="feature-item"><div class="feature-icon">🗓</div><div class="feature-title">Flexible Dates</div><div class="feature-desc">Cancel or reschedule up to 48 hours before departure.</div></div>
+    <div class="feature-item"><div class="feature-icon">🚐</div><div class="feature-title">Verified Cabs</div><div class="feature-desc">ID-checked drivers with verified vehicles across Himachal & Chandigarh.</div></div>
+    <div class="feature-item"><div class="feature-icon">🏨</div><div class="feature-title">Curated Stays</div><div class="feature-desc">Handpicked guesthouses and camps with real guest reviews.</div></div>
+    <div class="feature-item"><div class="feature-icon">🛡</div><div class="feature-title">Travel Insurance</div><div class="feature-desc">Complimentary coverage on bookings above ₹15,000 per person.</div></div>
+    <div class="feature-item"><div class="feature-icon">📞</div><div class="feature-title">24/7 AI Support</div><div class="feature-desc">Our AI team is available round the clock on chat & WhatsApp.</div></div>
+    <div class="feature-item"><div class="feature-icon">💰</div><div class="feature-title">Best Price Guarantee</div><div class="feature-desc">Found it cheaper elsewhere? We'll match it.</div></div>
+  </div>
+</section>
+
+<!-- TRIP COST CALCULATOR (FareBot) -->
+<section id="calculator">
+  <div style="text-align:center;margin-bottom:40px">
+    <div class="section-eyebrow" style="text-align:center">AI Trip Planner</div>
+    <h2 class="section-title" style="margin:0 auto;text-align:center;max-width:520px">FareBot — Trip Cost Calculator</h2>
+    <p style="color:var(--mist);font-size:0.9rem;margin-top:12px">Fuel rate, distance, driver fee, hotel & food — sab ek jagah</p>
+  </div>
+  <div class="calc-card">
+    <div class="calc-grid">
+      <div class="calc-field"><label>Distance (km)</label><input type="number" id="calcDistance" value="150" class="modal-input"></div>
+      <div class="calc-field"><label>Mileage (km/l)</label><input type="number" id="calcMileage" value="12" class="modal-input"></div>
+      <div class="calc-field"><label>Fuel Price (₹/L)</label><input type="number" id="calcFuelPrice" value="94.6" step="0.1" class="modal-input"></div>
+      <div class="calc-field"><label>Driver Fee (₹/day)</label><input type="number" id="calcDriverFee" value="1500" class="modal-input"></div>
+      <div class="calc-field"><label>Duration (days)</label><input type="number" id="calcDays" value="5" class="modal-input"></div>
+      <div class="calc-field"><label>Hotel (₹/night)</label><input type="number" id="calcHotel" value="2500" class="modal-input"></div>
+      <div class="calc-field"><label>Food (₹/day/person)</label><input type="number" id="calcFood" value="600" class="modal-input"></div>
+      <div class="calc-field"><label>No. of People</label><input type="number" id="calcPeople" value="2" class="modal-input"></div>
+    </div>
+    <button class="btn-calc" onclick="calculateTripCost()">🧮 Calculate Total Cost</button>
+    <div class="calc-result-box" id="calcResultBox"><div id="calcResult"></div></div>
+    <div class="calc-note">📍 Himachal Pradesh (Shimla) avg. rate ~₹102.5/L petrol, ~₹94.6/L diesel (Jul 2026, fluctuates daily — confirm before booking).</div>
+    <div class="emp-input-row" style="padding:16px 0 0;border-top:1px solid var(--border);margin-top:16px">
+      <input type="text" class="emp-input" id="fareInput" placeholder="Ask FareBot — e.g. 6 logon ke liye Ladakh trip kitne ka?">
+      <button class="emp-send" onclick="sendEmployee('fare')">Ask</button>
+    </div>
+    <div class="emp-messages" id="fareMsgs" style="padding-top:12px;max-height:160px"></div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment">
+  <div style="text-align:center;margin-bottom:48px">
+    <div class="section-eyebrow" style="text-align:center">Secure Payment</div>
+    <h2 class="section-title" style="margin:0 auto;text-align:center;max-width:480px">Pay Easily & Securely</h2>
+    <p style="color:var(--mist);font-size:0.9rem;margin-top:12px">Zero booking fee. Pay advance to confirm your seat.</p>
+  </div>
+  <div class="payment-grid">
+    <div class="payment-card">
+      <h3>📱 UPI / QR Code</h3>
+      <p>Scan with any UPI app — PhonePe, GPay, Paytm, BHIM.</p>
+      <div class="qr-box">
+        <div id="qrCodeBox" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#666;font-size:0.7rem;text-align:center;padding:8px">Loading QR…</div>
+      </div>
+      <div class="upi-id">UPI: deepusamkaria.ds-1@okhdfcbank</div>
+      <a href="upi://pay?pa=deepusamkaria.ds-1@okhdfcbank&pn=HimYatra&cu=INR" class="btn-pay" onclick="payUPI();return true;">📱 Pay via UPI App</a>
+      <div class="razorpay-note" id="upiPayNote">Supports PhonePe · Google Pay · Paytm · BHIM</div>
+    </div>
+    <div class="payment-card">
+      <h3>💬 Pay via WhatsApp</h3>
+      <p>Send your booking details — we'll send a secure payment link instantly.</p>
+      <div style="font-size:4rem;margin:24px 0">💳</div>
+      <div style="font-size:1.6rem;font-family:'Playfair Display',serif;color:var(--white);margin-bottom:8px">+91 78320 42517</div>
+      <div style="font-size:0.8rem;color:var(--mist);margin-bottom:24px">WhatsApp / Call / SMS</div>
+      <a href="https://wa.me/917832042517?text=Hi!%20I%20want%20to%20pay%20and%20confirm%20my%20HimYatra%20booking." class="btn-pay-wa" target="_blank">💬 WhatsApp to Pay</a>
+      <div class="razorpay-note">We'll send Razorpay / UPI link within minutes</div>
+    </div>
+  </div>
+</section>
+
+<!-- AI EMPLOYEES -->
+<section class="features-section">
+  <div style="text-align:center;margin-bottom:0">
+    <div class="section-eyebrow" style="text-align:center">AI-Powered Team</div>
+    <h2 class="section-title" style="margin:0 auto;text-align:center;max-width:520px">Meet Our AI Employees</h2>
+    <p style="color:var(--mist);font-size:0.9rem;margin-top:12px">Available 24/7 — every conversation is summarized in Navdeep's Owner Dashboard below</p>
+  </div>
+  <div class="ai-employees-grid">
+    <div class="employee-card">
+      <div class="emp-header">
+        <div class="emp-avatar social">📸</div>
+        <div><div class="emp-name">SocialBot</div><div class="emp-role">Social Media Manager</div><div class="emp-status"><span class="emp-dot"></span>Instagram · Facebook · Twitter</div></div>
+      </div>
+      <div class="emp-messages" id="socialMsgs"><div class="emp-msg-bot">Namaste! 🙏 Main HimYatra ki social media handle karta hoon — captions, reels scripts, hashtags, content calendar. Kya chahiye?</div></div>
+      <div class="emp-input-row"><input type="text" class="emp-input" id="socialInput" placeholder="e.g. Instagram caption for Ladakh tour…"><button class="emp-send" onclick="sendEmployee('social')">Send</button></div>
+    </div>
+
+    <div class="employee-card">
+      <div class="emp-header">
+        <div class="emp-avatar legal">⚖️</div>
+        <div><div class="emp-name">LexBot</div><div class="emp-role">Legal & Compliance</div><div class="emp-status"><span class="emp-dot"></span>Permits · Refunds · GST</div></div>
+      </div>
+      <div class="emp-messages" id="legalMsgs"><div class="emp-msg-bot">Namaste! ⚖️ Main LexBot hoon — permits, consumer rights, refund policy, GST, NOC jaise legal sawaalon mein madad karta hoon. Poochiye!</div></div>
+      <div class="emp-input-row"><input type="text" class="emp-input" id="legalInput" placeholder="e.g. Rohtang Pass permit chahiye kya?"><button class="emp-send" onclick="sendEmployee('legal')">Ask</button></div>
+    </div>
+
+    <div class="employee-card">
+      <div class="emp-header">
+        <div class="emp-avatar resolve">🛠️</div>
+        <div><div class="emp-name">ResolveBot</div><div class="emp-role">Complaint & Issue Resolution</div><div class="emp-status"><span class="emp-dot"></span>Real-time · Customers & Drivers</div></div>
+      </div>
+      <div class="emp-messages" id="resolveMsgs"><div class="emp-msg-bot">Namaste! 🛠️ Koi bhi problem ho — booking issue, delayed cab, refund, ya driver ki dikkat — turant bataiye, main abhi solve karta hoon.</div></div>
+      <div style="padding:0 24px 10px">
+        <select class="modal-input" id="resolveReporterType" style="font-size:0.78rem;padding:8px 12px">
+          <option value="Customer">👤 Main Customer hoon</option>
+          <option value="Driver">🚖 Main Driver hoon</option>
+        </select>
+      </div>
+      <div class="emp-input-row"><input type="text" class="emp-input" id="resolveInput" placeholder="e.g. Mera driver 1 hour late hai…"><button class="emp-send" onclick="sendEmployee('resolve')">Send</button></div>
+    </div>
+
+    <div class="employee-card">
+      <div class="emp-header">
+        <div class="emp-avatar fleet">🚖</div>
+        <div><div class="emp-name">FleetBot</div><div class="emp-role">Driver Management</div><div class="emp-status"><span class="emp-dot"></span>Onboarding · Dispatch · Support</div></div>
+      </div>
+      <div class="emp-messages" id="fleetMsgs"><div class="emp-msg-bot">Namaste! 🚖 Main FleetBot hoon — driver onboarding, documents, trip assignment aur payout se juda koi bhi sawaal poochiye.</div></div>
+      <div class="emp-input-row"><input type="text" class="emp-input" id="fleetInput" placeholder="e.g. Naye driver ko kya documents chahiye?"><button class="emp-send" onclick="sendEmployee('fleet')">Ask</button></div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px">
+    <div class="ai-card">
+      <div class="ai-header"><div class="emp-avatar travel">🏔</div><div><div class="emp-name">HimBot — Travel Assistant</div><div class="emp-status"><span class="emp-dot"></span>Routes · Permits · Packing · Itineraries</div></div></div>
+      <div class="ai-messages" id="travelMsgs">
+        <div class="msg"><div class="msg-bot">Namaste! 🙏 Main HimBot hoon — routes, permits, packing, weather, budget ya poori itinerary ke baare mein poochiye!</div></div>
+        <div class="msg"><div class="msg-user">Spiti jaane ka best time kya hai?</div></div>
+        <div class="msg"><div class="msg-bot"><strong>June se October</strong> best hai — roads fully open rehte hain aur high-altitude villages accessible hote hain. July–August peak season hai.</div></div>
+      </div>
+      <div class="ai-input-row"><input type="text" class="ai-input" id="travelInput" placeholder="Routes, permits, packing, budget poochiye…"><button class="btn-send" onclick="sendEmployee('travel')">Ask</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- DRIVERS DIRECTORY -->
+<section id="drivers" class="driver-section">
+  <div class="driver-section-bg"></div>
+  <div class="driver-section-overlay"></div>
+  <div class="driver-section-content">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Verified Fleet</div>
+        <h2 class="section-title">Himachal & Chandigarh Drivers</h2>
+        <div class="sample-warning">⚠️ Sample data for demo — connect with us to onboard your real verified drivers.</div>
+      </div>
+      <button class="btn-ghost" onclick="openModalEl('driverAuthModal')" style="border-color:var(--gold);color:var(--gold)">+ Join as Driver</button>
+    </div>
+    <div class="dest-grid">
+      <div class="driver-card">
+        <div class="driver-card-top"><div class="driver-avatar">👨‍✈️</div><div><div class="driver-name">Rajesh Thakur</div><div class="driver-city">📍 Shimla, HP</div></div></div>
+        <div class="driver-verified">✓ Govt ID Verified</div>
+        <div class="driver-details">
+          <div class="driver-detail-row"><span>🚙 Vehicle</span><span>Innova Crysta</span></div>
+          <div class="driver-detail-row"><span>📅 Experience</span><span>8 years</span></div>
+          <div class="driver-detail-row"><span>⭐ Rating</span><span>4.8/5</span></div>
+          <div class="driver-detail-row"><span>📱 Contact</span><span>+91 9XXXX-XXXXX</span></div>
+        </div>
+        <button class="btn-book-driver" onclick="bookDriver('Rajesh Thakur')">Book This Driver</button>
+      </div>
+      <div class="driver-card">
+        <div class="driver-card-top"><div class="driver-avatar">👨‍✈️</div><div><div class="driver-name">Vikram Chauhan</div><div class="driver-city">📍 Manali, HP</div></div></div>
+        <div class="driver-verified">✓ Govt ID Verified</div>
+        <div class="driver-details">
+          <div class="driver-detail-row"><span>🚙 Vehicle</span><span>Tempo Traveller (12-seater)</span></div>
+          <div class="driver-detail-row"><span>📅 Experience</span><span>6 years</span></div>
+          <div class="driver-detail-row"><span>⭐ Rating</span><span>4.9/5</span></div>
+          <div class="driver-detail-row"><span>📱 Contact</span><span>+91 9XXXX-XXXXX</span></div>
+        </div>
+        <button class="btn-book-driver" onclick="bookDriver('Vikram Chauhan')">Book This Driver</button>
+      </div>
+      <div class="driver-card">
+        <div class="driver-card-top"><div class="driver-avatar">👨‍✈️</div><div><div class="driver-name">Sanjay Verma</div><div class="driver-city">📍 Chandigarh</div></div></div>
+        <div class="driver-verified">✓ Govt ID Verified</div>
+        <div class="driver-details">
+          <div class="driver-detail-row"><span>🚙 Vehicle</span><span>Swift Dzire</span></div>
+          <div class="driver-detail-row"><span>📅 Experience</span><span>5 years</span></div>
+          <div class="driver-detail-row"><span>⭐ Rating</span><span>4.7/5</span></div>
+          <div class="driver-detail-row"><span>📱 Contact</span><span>+91 9XXXX-XXXXX</span></div>
+        </div>
+        <button class="btn-book-driver" onclick="bookDriver('Sanjay Verma')">Book This Driver</button>
+      </div>
+      <div class="driver-card">
+        <div class="driver-card-top"><div class="driver-avatar">👨‍✈️</div><div><div class="driver-name">Deepak Negi</div><div class="driver-city">📍 Kullu, HP</div></div></div>
+        <div class="driver-verified">✓ Govt ID Verified</div>
+        <div class="driver-details">
+          <div class="driver-detail-row"><span>🚙 Vehicle</span><span>Innova Crysta</span></div>
+          <div class="driver-detail-row"><span>📅 Experience</span><span>10 years</span></div>
+          <div class="driver-detail-row"><span>⭐ Rating</span><span>4.9/5</span></div>
+          <div class="driver-detail-row"><span>📱 Contact</span><span>+91 9XXXX-XXXXX</span></div>
+        </div>
+        <button class="btn-book-driver" onclick="bookDriver('Deepak Negi')">Book This Driver</button>
+      </div>
+      <div class="driver-card">
+        <div class="driver-card-top"><div class="driver-avatar">👨‍✈️</div><div><div class="driver-name">Amit Sharma</div><div class="driver-city">📍 Chandigarh</div></div></div>
+        <div class="driver-verified">✓ Govt ID Verified</div>
+        <div class="driver-details">
+          <div class="driver-detail-row"><span>🚙 Vehicle</span><span>Tempo Traveller (17-seater)</span></div>
+          <div class="driver-detail-row"><span>📅 Experience</span><span>7 years</span></div>
+          <div class="driver-detail-row"><span>⭐ Rating</span><span>4.6/5</span></div>
+          <div class="driver-detail-row"><span>📱 Contact</span><span>+91 9XXXX-XXXXX</span></div>
+        </div>
+        <button class="btn-book-driver" onclick="bookDriver('Amit Sharma')">Book This Driver</button>
+      </div>
+      <div class="driver-card">
+        <div class="driver-card-top"><div class="driver-avatar">👨‍✈️</div><div><div class="driver-name">Suresh Rana</div><div class="driver-city">📍 Kaza, Spiti</div></div></div>
+        <div class="driver-verified">✓ Govt ID Verified</div>
+        <div class="driver-details">
+          <div class="driver-detail-row"><span>🚙 Vehicle</span><span>Scorpio (4x4)</span></div>
+          <div class="driver-detail-row"><span>📅 Experience</span><span>9 years</span></div>
+          <div class="driver-detail-row"><span>⭐ Rating</span><span>5.0/5</span></div>
+          <div class="driver-detail-row"><span>📱 Contact</span><span>+91 9XXXX-XXXXX</span></div>
+        </div>
+        <button class="btn-book-driver" onclick="bookDriver('Suresh Rana')">Book This Driver</button>
+      </div>
+    </div>
+
+    <div class="driver-cta-card" style="margin-top:48px">
+      <h3>🚖 Drive With HimYatra</h3>
+      <p>Own a cab in Himachal or Chandigarh? Join our verified fleet, get consistent bookings, and manage everything through your own driver dashboard — with FleetBot AI support 24/7.</p>
+      <button class="btn-primary" onclick="openModalEl('driverAuthModal')">Sign Up as Driver</button>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL SHARE -->
+<div class="share-section" id="share">
+  <div class="share-card">
+    <div class="section-eyebrow" style="text-align:center">Share HimYatra</div>
+    <div class="share-title">Tell Friends About Us</div>
+    <p class="share-sub">Share our website and earn ₹500 cashback on your next booking!</p>
+    <button class="btn-primary" id="nativeShareBtn" onclick="nativeShare()" style="width:100%;margin-bottom:16px;display:none">📤 Share Now</button>
+    <div class="share-link-box"><input type="text" id="shareLink" value="https://himyatra.in?ref=share" readonly><button class="btn-copy" onclick="copyLink()">Copy Link</button></div>
+    <div style="font-size:0.72rem;color:var(--mist);margin:-16px 0 24px">⚠️ Placeholder link — update once the site has a real hosted URL.</div>
+    <div class="social-btns">
+      <a href="https://wa.me/?text=Check%20out%20HimYatra%20for%20amazing%20Himalayan%20tours!%20https://himyatra.in" target="_blank" class="social-btn whatsapp">💬 WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram">📸 Instagram</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://himyatra.in" target="_blank" class="social-btn facebook">📘 Facebook</a>
+      <a href="https://twitter.com/intent/tweet?text=Book%20amazing%20Himalayan%20tours%20with%20HimYatra!%20https://himyatra.in" target="_blank" class="social-btn twitter">𝕏 Twitter/X</a>
+    </div>
+  </div>
+</div>
+
+<!-- OWNER / FOUNDER -->
+<section class="owner-section">
+  <div class="owner-section-bg"></div>
+  <div class="owner-section-overlay"></div>
+  <div class="owner-section-content">
+    <div class="owner-card">
+      <div class="owner-photo">🧑‍💼</div>
+      <div>
+        <div class="section-eyebrow">Founder & CEO</div>
+        <h2 class="section-title" style="max-width:none">Navdeep Samkaria</h2>
+        <p style="color:var(--mist);font-size:0.9rem;margin-top:12px;max-width:480px;line-height:1.7">Founder of HimYatra, building trusted, tech-enabled travel experiences across Himachal Pradesh & Ladakh — with a verified driver network and AI-powered support for every traveller.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER ACCESS POINTER -->
+<section>
+  <div style="text-align:center;max-width:520px;margin:0 auto">
+    <div class="section-eyebrow" style="text-align:center">Owner Access</div>
+    <h2 class="section-title" style="margin:0 auto;text-align:center;max-width:480px">Navdeep's Control Panel</h2>
+    <p style="color:var(--mist);font-size:0.9rem;margin-top:12px;line-height:1.7">A completely separate admin interface — live customers, drivers, bookings, leads, complaints & AI activity, all in one place.</p>
+    <button class="btn-primary" style="margin-top:24px" onclick="enterAdminMode()">🔐 Open Admin Panel</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header" style="justify-content:center;margin-bottom:48px">
+    <div style="text-align:center"><div class="section-eyebrow" style="text-align:center">Get In Touch</div><h2 class="section-title" style="margin:0 auto;text-align:center">We're Here to Help</h2></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Contact HimYatra</h3>
+      <p>Reach out for custom tour packages, group bookings, or any travel queries. We respond within 2 hours on WhatsApp.</p>
+      <div class="contact-item"><div class="contact-icon">📞</div><div class="contact-text">Call / WhatsApp: <a href="tel:+917832042517">+91 78320 42517</a></div></div>
+      <div class="contact-item"><div class="contact-icon">💬</div><div class="contact-text"><a href="https://wa.me/917832042517" target="_blank">Chat on WhatsApp →</a></div></div>
+      <div class="contact-item"><div class="contact-icon">📧</div><div class="contact-text">Email: <a href="mailto:info@himyatra.in">info@himyatra.in</a> <span style="color:var(--mist);font-size:0.75rem">(add your email)</span></div></div>
+      <div class="contact-item"><div class="contact-icon">📍</div><div class="contact-text">Himachal Pradesh, India</div></div>
+      <div class="contact-item"><div class="contact-icon">⏰</div><div class="contact-text">Mon–Sun: 8:00 AM – 10:00 PM</div></div>
+    </div>
+    <div class="contact-form">
+      <input type="text" class="cf-input" id="ctName" placeholder="Your Name">
+      <input type="tel" class="cf-input" id="ctPhone" placeholder="Mobile Number">
+      <input type="text" class="cf-input" id="ctDest" placeholder="Interested Destination">
+      <textarea class="cf-input" id="ctMsg" placeholder="Tell us about your travel plan…"></textarea>
+      <button class="btn-submit" onclick="submitContactForm()">Send via WhatsApp 💬</button>
+      <div class="auth-msg" id="ctFormMsg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">Him<span>Yatra</span></div>
+      <p>Founded by <strong style="color:var(--gold)">Navdeep Samkaria</strong>. Your trusted partner for Himalayan adventures — curated tours, verified cabs, handpicked stays, all in one place.</p>
+      <div style="margin-top:16px;display:flex;gap:12px">
+        <a href="https://wa.me/917832042517" target="_blank" style="color:var(--green);font-size:1.3rem;text-decoration:none">💬</a>
+        <a href="https://instagram.com" target="_blank" style="font-size:1.3rem;text-decoration:none">📸</a>
+        <a href="https://facebook.com" target="_blank" style="font-size:1.3rem;text-decoration:none">📘</a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Tours</h4><a href="#destinations">Ladakh Circuit</a><a href="#destinations">Manali Package</a><a href="#destinations">Spiti Valley</a><a href="#destinations">Kasol Trek</a></div>
+    <div class="footer-col"><h4>Services</h4><a href="#drivers">Verified Drivers</a><a href="#calculator">Trip Calculator</a><a href="#payment">Payment</a><a href="#">Travel Insurance</a></div>
+    <div class="footer-col"><h4>Contact</h4><a href="tel:+917832042517">📞 78320 42517</a><a href="https://wa.me/917832042517">💬 WhatsApp</a><a href="mailto:info@himyatra.in">📧 Email Us</a><a href="#share">🔗 Share Link</a><a href="#" onclick="enterAdminMode();return false;">🔐 Admin Panel</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-logo">Him<span>Yatra</span></div>
+    <div class="footer-copy">© 2026 HimYatra. Founded by Navdeep Samkaria. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ══════════════ SEPARATE ADMIN INTERFACE ══════════════ -->
+<div id="adminApp" style="display:none;min-height:100vh;background:var(--ink)">
+  <nav class="admin-nav">
+    <div class="admin-nav-left">
+      <a href="#" class="logo" onclick="return false;">Him<span>Yatra</span></a>
+      <span class="admin-role-tag">🔐 Admin — Navdeep Samkaria, Founder</span>
+    </div>
+    <button class="nav-login" onclick="exitAdminMode()">← Exit to Website</button>
+  </nav>
+
+  <div class="admin-wrap">
+    <h1 class="section-title" style="max-width:none;margin-bottom:6px">Control Panel</h1>
+    <p style="color:var(--mist);font-size:0.9rem">Live view of customers, drivers, bookings, leads & AI activity — refresh anytime.</p>
+
+    <div class="admin-actions">
+      <button class="btn-admin gold" onclick="loadAdminData()">🔄 Refresh Data</button>
+      <button class="btn-admin green" onclick="sendOwnerReport()">📤 Send Summary to WhatsApp</button>
+    </div>
+
+    <div id="storageModeNote" style="font-size:0.78rem;color:var(--mist);margin-bottom:16px"></div>
+
+    <div class="dashboard-stats-grid" id="adminStatsGrid"></div>
+
+    <div class="employee-card" style="margin:28px 0 32px;max-width:none">
+      <div class="emp-header">
+        <div class="emp-avatar boss">🧑‍💻</div>
+        <div><div class="emp-name">BossBot</div><div class="emp-role">Company Monitor & Reporting</div><div class="emp-status"><span class="emp-dot"></span>Sees live data · For Navdeep only</div></div>
+      </div>
+      <div class="emp-messages" id="bossMsgs" style="max-height:240px">
+        <div class="emp-msg-bot">Namaste Navdeep! 👋 Main BossBot hoon — customers, drivers, bookings, leads, issues aur baaki sab bots ki activity, sabka live snapshot mere paas hai. Kuch bhi poochiye, ya neeche button dabaiye.</div>
+      </div>
+      <div style="padding:0 24px 12px">
+        <button class="btn-mini" onclick="askBossBotBrief()">📋 Get Instant Brief</button>
+      </div>
+      <div class="emp-input-row"><input type="text" class="emp-input" id="bossInput" placeholder="e.g. Aaj kya urgent hai? Kise kya karna chahiye?"><button class="emp-send" onclick="sendEmployee('boss')">Ask</button></div>
+    </div>
+
+    <div class="admin-tabs" id="adminTabsBar">
+      <button class="auth-tab active" data-tab="customers" onclick="showAdminTab('customers')">Customers</button>
+      <button class="auth-tab" data-tab="drivers" onclick="showAdminTab('drivers')">Drivers</button>
+      <button class="auth-tab" data-tab="bookings" onclick="showAdminTab('bookings')">Bookings</button>
+      <button class="auth-tab" data-tab="leads" onclick="showAdminTab('leads')">Leads</button>
+      <button class="auth-tab" data-tab="issues" onclick="showAdminTab('issues')">Issues</button>
+      <button class="auth-tab" data-tab="activity" onclick="showAdminTab('activity')">AI Activity</button>
+    </div>
+
+    <div class="admin-panel active" id="adminPanel-customers"><div class="admin-empty">Loading…</div></div>
+    <div class="admin-panel" id="adminPanel-drivers"><div class="admin-empty">Loading…</div></div>
+    <div class="admin-panel" id="adminPanel-bookings"><div class="admin-empty">Loading…</div></div>
+    <div class="admin-panel" id="adminPanel-leads"><div class="admin-empty">Loading…</div></div>
+    <div class="admin-panel" id="adminPanel-issues"><div class="admin-empty">Loading…</div></div>
+    <div class="admin-panel" id="adminPanel-activity"><div class="admin-empty">Loading…</div></div>
+
+    <div class="admin-security-note" id="adminSecurityNote">
+      ⚠️ <strong>Before real customer data flows through this:</strong> fill in FIREBASE_CONFIG, ADMIN_EMAIL and CLOUD_FUNCTION_URL near the top of the file's &lt;script&gt; (see FIREBASE_SETUP_GUIDE.md). Until then this runs in demo mode — fine for testing, but signups/bookings aren't securely stored and the passcode (<strong>navdeep123</strong>) is visible in the page source.
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore-compat.js"></script>
+<script>
+// ══════════════════════════════════════════════════════════════
+// FIREBASE SETUP — the ONE place to edit (see FIREBASE_SETUP_GUIDE.md)
+// Paste your real project's values below. Until you do, the site
+// automatically keeps running in DEMO mode (same as before) so it
+// never breaks — it upgrades itself the moment real values are here.
+// ══════════════════════════════════════════════════════════════
+const FIREBASE_CONFIG = {
+  apiKey: "PASTE_YOUR_FIREBASE_API_KEY",
+  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
+  projectId: "PASTE_YOUR_PROJECT_ID",
+  storageBucket: "PASTE_YOUR_PROJECT.firebasestorage.app",
+  messagingSenderId: "PASTE_YOUR_SENDER_ID",
+  appId: "PASTE_YOUR_APP_ID"
+};
+// This is Navdeep's admin login email — must match ADMIN_EMAIL_HERE in firestore.rules.
+const ADMIN_EMAIL = "PASTE_ADMIN_LOGIN_EMAIL_HERE";
+// Your deployed Cloud Function URL, e.g. https://us-central1-yourproject.cloudfunctions.net/chatWithAI
+const CLOUD_FUNCTION_URL = "PASTE_YOUR_CLOUD_FUNCTION_URL_HERE";
+
+const firebaseConfigured = FIREBASE_CONFIG.apiKey && !FIREBASE_CONFIG.apiKey.startsWith('PASTE_');
+const aiBackendConfigured = CLOUD_FUNCTION_URL && !CLOUD_FUNCTION_URL.startsWith('PASTE_');
+let auth = null, db = null;
+if(firebaseConfigured){
+  try{
+    firebase.initializeApp(FIREBASE_CONFIG);
+    auth = firebase.auth();
+    db = firebase.firestore();
+  }catch(e){ console.error('Firebase init failed:', e); }
+}
+function friendlyFirebaseError(e){
+  const code = (e && e.code) || '';
+  const map = {
+    'auth/email-already-in-use': 'Ye email pehle se registered hai — Log In karein.',
+    'auth/weak-password': 'Password kam se kam 6 characters ka hona chahiye.',
+    'auth/invalid-email': 'Email sahi format mein nahi hai.',
+    'auth/wrong-password': 'Email ya password galat hai.',
+    'auth/invalid-credential': 'Email ya password galat hai.',
+    'auth/user-not-found': 'Account nahi mila. Pehle Sign Up karein.',
+    'auth/too-many-requests': 'Bahut attempts ho gaye, thodi der baad try karein.'
+  };
+  return map[code] || ((e && e.message) ? e.message : 'Kuch error aaya, dobara try karein.');
+}
+// ── REAL SCANNABLE PAYMENT QR ──
+const UPI_ID = 'deepusamkaria.ds-1@okhdfcbank';
+function renderPaymentQR(){
+  const box = document.getElementById('qrCodeBox');
+  if(!box) return;
+  try{
+    if(typeof QRCode === 'undefined') throw new Error('qr-library-not-loaded');
+    box.innerHTML = '';
+    box.style.color = '';
+    new QRCode(box, {
+      text: 'upi://pay?pa=' + UPI_ID + '&pn=HimYatra&cu=INR',
+      width: 148,
+      height: 148,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  }catch(e){
+    box.innerHTML = 'QR load nahi ho paaya.<br>UPI ID neeche use karein 👇';
+  }
+}
+renderPaymentQR();
+// ── SAFE STORAGE (demo-mode fallback, only used while Firebase isn't configured yet) ──
+window.__localStore = window.__localStore || {};
+window.__storageMode = 'checking';
+
+async function safeGet(key, shared){
+  try{
+    if(typeof window.storage === 'undefined' || !window.storage) throw new Error('storage-api-unavailable');
+    const r = await window.storage.get(key, shared);
+    window.__storageMode = 'live';
+    return r;
+  }catch(e){
+    if(window.__storageMode !== 'live') window.__storageMode = 'local';
+    const val = window.__localStore[key];
+    return val !== undefined ? { key:key, value:val, shared:!!shared } : null;
+  }
+}
+async function safeSet(key, value, shared){
+  window.__localStore[key] = value; // always mirror locally so the UI never hard-fails
+  try{
+    if(typeof window.storage === 'undefined' || !window.storage) throw new Error('storage-api-unavailable');
+    const r = await window.storage.set(key, value, shared);
+    window.__storageMode = 'live';
+    return r;
+  }catch(e){
+    if(window.__storageMode !== 'live') window.__storageMode = 'local';
+    return { key:key, value:value, shared:!!shared };
+  }
+}
+async function safeList(prefix, shared){
+  try{
+    if(typeof window.storage === 'undefined' || !window.storage) throw new Error('storage-api-unavailable');
+    const r = await window.storage.list(prefix, shared);
+    window.__storageMode = 'live';
+    return r;
+  }catch(e){
+    if(window.__storageMode !== 'live') window.__storageMode = 'local';
+    const keys = Object.keys(window.__localStore).filter(function(k){ return !prefix || k.indexOf(prefix) === 0; });
+    return { keys:keys, prefix:prefix, shared:!!shared };
+  }
+}
+
+// ── GENERIC MODAL HELPERS ──
+function openModalEl(id){ document.getElementById(id).classList.add('show'); }
+function closeModalEl(id){ document.getElementById(id).classList.remove('show'); }
+document.querySelectorAll('.modal-overlay').forEach(function(overlay){
+  overlay.addEventListener('click', function(e){ if(e.target === this) this.classList.remove('show'); });
+});
+
+// ── BOOKING MODAL ──
+function openModal(tourName){
+  document.getElementById('modalTourName').textContent = tourName || 'Mountain Tour';
+  openModalEl('bookingModal');
+}
+function payUPI(){
+  const msgEl = document.getElementById('bkMsg');
+  const noteEl = document.getElementById('upiPayNote');
+  try{ window.location.href = 'upi://pay?pa=' + UPI_ID + '&pn=HimYatra&cu=INR'; }catch(e){}
+  try{ navigator.clipboard && navigator.clipboard.writeText(UPI_ID); }catch(e){}
+  const feedback = '📋 UPI ID copied: ' + UPI_ID + '. Agar UPI app apne aap na khule (kai preview browsers UPI links open nahi karte), to apna UPI app (GPay/PhonePe/Paytm) kholkar ye ID paste kar dein, ya QR code scan karein.';
+  if(msgEl){ msgEl.style.color = '#F59E0B'; msgEl.textContent = feedback; }
+  if(noteEl){ noteEl.style.color = '#F59E0B'; noteEl.textContent = feedback; }
+}
+function payWA(){ window.open('https://wa.me/917832042517?text=I%20want%20to%20pay%20for%20my%20HimYatra%20booking!','_blank'); }
+
+// ── COPY LINK ──
+function copyLink(){
+  const input = document.getElementById('shareLink');
+  input.select();
+  navigator.clipboard.writeText(input.value).then(function(){
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = 'Copied! ✓'; btn.style.background = '#4ade80';
+    setTimeout(function(){ btn.textContent='Copy Link'; btn.style.background=''; }, 2000);
+  });
+}
+
+// ── NATIVE SHARE (opens the phone's real share sheet — WhatsApp, SMS, Email, everything) ──
+async function nativeShare(){
+  const linkInput = document.getElementById('shareLink');
+  const shareData = {
+    title: 'HimYatra — Explore Himachal, Experience Heaven',
+    text: 'Check out HimYatra for Himalayan tours, verified cabs & AI-powered trip planning!',
+    url: linkInput ? linkInput.value : window.location.href
+  };
+  try{
+    if(navigator.share){
+      await navigator.share(shareData);
+    } else {
+      const shareSection = document.getElementById('share');
+      if(shareSection) shareSection.scrollIntoView({behavior:'smooth'});
+    }
+  }catch(e){ /* user closed the share sheet without picking anything — nothing to do */ }
+}
+if(navigator.share){
+  const nativeBtn = document.getElementById('nativeShareBtn');
+  if(nativeBtn) nativeBtn.style.display = 'block';
+}
+
+// ── CUSTOMER / DRIVER AUTH ──
+let custAuthMode = 'login';
+let driverAuthMode = 'login';
+let currentCustomer = null;
+let currentDriver = null;
+
+function switchAuthTab(type, mode){
+  if(type === 'customer'){
+    custAuthMode = mode;
+    document.getElementById('custTabLogin').classList.toggle('active', mode==='login');
+    document.getElementById('custTabSignup').classList.toggle('active', mode==='signup');
+    document.querySelectorAll('.auth-signup-only-customer').forEach(function(el){ el.style.display = mode==='signup' ? 'block' : 'none'; });
+    document.getElementById('custAuthSubmitBtn').textContent = mode==='signup' ? 'Sign Up' : 'Log In';
+    document.getElementById('custAuthMsg').textContent = '';
+  } else {
+    driverAuthMode = mode;
+    document.getElementById('drvTabLogin').classList.toggle('active', mode==='login');
+    document.getElementById('drvTabSignup').classList.toggle('active', mode==='signup');
+    document.querySelectorAll('.auth-signup-only-driver').forEach(function(el){ el.style.display = mode==='signup' ? 'block' : 'none'; });
+    document.getElementById('drvAuthSubmitBtn').textContent = mode==='signup' ? 'Sign Up' : 'Log In';
+    document.getElementById('drvAuthMsg').textContent = '';
+  }
+}
+
+async function handleCustomerAuth(){
+  const email = document.getElementById('custEmail').value.trim().toLowerCase();
+  const password = document.getElementById('custPassword').value;
+  const msgEl = document.getElementById('custAuthMsg');
+  msgEl.style.color = '#f87171';
+  if(!email || !password){ msgEl.textContent = 'Email aur password dono bharein.'; return; }
+
+  if(firebaseConfigured){
+    try{
+      if(custAuthMode === 'signup'){
+        const name = document.getElementById('custName').value.trim();
+        const phone = document.getElementById('custPhone').value.trim();
+        if(!name || !phone){ msgEl.textContent = 'Sab fields bharna zaroori hai.'; return; }
+        const cred = await auth.createUserWithEmailAndPassword(email, password);
+        await db.collection('customers').doc(cred.user.uid).set({ name:name, email:email, phone:phone, joinedAt:new Date().toISOString() });
+        logActivity('👤','New Signup', name + ' joined as a customer');
+        msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome ' + name + '! Account ban gaya 🎉';
+        currentCustomer = {name:name, email:email};
+        document.getElementById('navLoginBtn').textContent = '👤 ' + name.split(' ')[0];
+        setTimeout(function(){ closeModalEl('customerAuthModal'); }, 1200);
+      } else {
+        const cred = await auth.signInWithEmailAndPassword(email, password);
+        const docSnap = await db.collection('customers').doc(cred.user.uid).get();
+        const data = docSnap.exists ? docSnap.data() : { name: email };
+        msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome back, ' + data.name + '! 🎉';
+        currentCustomer = {name:data.name, email:email};
+        document.getElementById('navLoginBtn').textContent = '👤 ' + data.name.split(' ')[0];
+        setTimeout(function(){ closeModalEl('customerAuthModal'); }, 1200);
+      }
+    }catch(e){ msgEl.textContent = friendlyFirebaseError(e); }
+    return;
+  }
+
+  // DEMO MODE (Firebase not configured yet) — same as before
+  try{
+    if(custAuthMode === 'signup'){
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      if(!name || !phone){ msgEl.textContent = 'Sab fields bharna zaroori hai.'; return; }
+      let existing = null;
+      try{ existing = await safeGet('customer:' + email, true); }catch(e){}
+      if(existing){ msgEl.textContent = 'Ye email pehle se registered hai — Log In karein.'; return; }
+      await safeSet('customer:' + email, JSON.stringify({name:name, email:email, phone:phone, joinedAt:new Date().toISOString()}), true);
+      logActivity('👤','New Signup', name + ' joined as a customer');
+      msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome ' + name + '! Account ban gaya 🎉';
+      currentCustomer = {name:name, email:email};
+      document.getElementById('navLoginBtn').textContent = '👤 ' + name.split(' ')[0];
+      setTimeout(function(){ closeModalEl('customerAuthModal'); }, 1200);
+    } else {
+      let existing = null;
+      try{ existing = await safeGet('customer:' + email, true); }catch(e){}
+      if(!existing){ msgEl.textContent = 'Account nahi mila. Pehle Sign Up karein.'; return; }
+      const data = JSON.parse(existing.value);
+      msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome back, ' + data.name + '! 🎉';
+      currentCustomer = {name:data.name, email:email};
+      document.getElementById('navLoginBtn').textContent = '👤 ' + data.name.split(' ')[0];
+      setTimeout(function(){ closeModalEl('customerAuthModal'); }, 1200);
+    }
+  }catch(e){ msgEl.textContent = 'Error: ' + (e && e.message ? e.message : 'kuch gadbad hui') + ' — dobara try karein.'; }
+}
+
+async function handleDriverAuth(){
+  const phone = document.getElementById('drvPhone').value.trim();
+  const email = document.getElementById('drvEmail').value.trim().toLowerCase();
+  const password = document.getElementById('drvPassword').value;
+  const msgEl = document.getElementById('drvAuthMsg');
+  msgEl.style.color = '#f87171';
+  if(!phone || !password){ msgEl.textContent = 'Mobile number aur password bharein.'; return; }
+
+  if(firebaseConfigured){
+    if(!email){ msgEl.textContent = 'Email bhi bharein (login ke liye zaroori hai).'; return; }
+    try{
+      if(driverAuthMode === 'signup'){
+        const name = document.getElementById('drvName').value.trim();
+        const city = document.getElementById('drvCity').value;
+        const vehicle = document.getElementById('drvVehicle').value;
+        const license = document.getElementById('drvLicense').value.trim();
+        if(!name || !city || !vehicle || !license){ msgEl.textContent = 'Sab fields bharna zaroori hai.'; return; }
+        const cred = await auth.createUserWithEmailAndPassword(email, password);
+        await db.collection('drivers').doc(cred.user.uid).set({ name:name, phone:phone, email:email, city:city, vehicle:vehicle, license:license, status:'Pending', joinedAt:new Date().toISOString() });
+        logActivity('🚖','New Driver', name + ' applied from ' + city);
+        msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome ' + name + '! Driver account ban gaya 🎉 Team verification ke baad aap live honge.';
+        currentDriver = {name:name, phone:phone};
+        setTimeout(function(){ closeModalEl('driverAuthModal'); }, 1600);
+      } else {
+        const cred = await auth.signInWithEmailAndPassword(email, password);
+        const docSnap = await db.collection('drivers').doc(cred.user.uid).get();
+        const data = docSnap.exists ? docSnap.data() : { name: email };
+        msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome back, ' + data.name + '! 🎉';
+        currentDriver = {name:data.name, phone:phone};
+        setTimeout(function(){ closeModalEl('driverAuthModal'); }, 1200);
+      }
+    }catch(e){ msgEl.textContent = friendlyFirebaseError(e); }
+    return;
+  }
+
+  // DEMO MODE (Firebase not configured yet) — same as before
+  try{
+    if(driverAuthMode === 'signup'){
+      const name = document.getElementById('drvName').value.trim();
+      const city = document.getElementById('drvCity').value;
+      const vehicle = document.getElementById('drvVehicle').value;
+      const license = document.getElementById('drvLicense').value.trim();
+      if(!name || !city || !vehicle || !license){ msgEl.textContent = 'Sab fields bharna zaroori hai.'; return; }
+      let existing = null;
+      try{ existing = await safeGet('driver:' + phone, true); }catch(e){}
+      if(existing){ msgEl.textContent = 'Ye number pehle se registered hai — Log In karein.'; return; }
+      await safeSet('driver:' + phone, JSON.stringify({name:name, phone:phone, city:city, vehicle:vehicle, license:license, status:'Pending', joinedAt:new Date().toISOString()}), true);
+      logActivity('🚖','New Driver', name + ' applied from ' + city);
+      msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome ' + name + '! Driver account ban gaya 🎉 Team verification ke baad aap live honge.';
+      currentDriver = {name:name, phone:phone};
+      setTimeout(function(){ closeModalEl('driverAuthModal'); }, 1600);
+    } else {
+      let existing = null;
+      try{ existing = await safeGet('driver:' + phone, true); }catch(e){}
+      if(!existing){ msgEl.textContent = 'Driver account nahi mila. Pehle Sign Up karein.'; return; }
+      const data = JSON.parse(existing.value);
+      msgEl.style.color = '#4ade80'; msgEl.textContent = 'Welcome back, ' + data.name + '! 🎉';
+      currentDriver = {name:data.name, phone:phone};
+      setTimeout(function(){ closeModalEl('driverAuthModal'); }, 1200);
+    }
+  }catch(e){ msgEl.textContent = 'Error: ' + (e && e.message ? e.message : 'kuch gadbad hui') + ' — dobara try karein.'; }
+}
+
+// ── TRIP COST CALCULATOR ──
+function calculateTripCost(){
+  const distance = parseFloat(document.getElementById('calcDistance').value) || 0;
+  const mileage = parseFloat(document.getElementById('calcMileage').value) || 12;
+  const fuelPrice = parseFloat(document.getElementById('calcFuelPrice').value) || 0;
+  const driverFee = parseFloat(document.getElementById('calcDriverFee').value) || 0;
+  const days = parseInt(document.getElementById('calcDays').value) || 1;
+  const hotelPerNight = parseFloat(document.getElementById('calcHotel').value) || 0;
+  const foodPerDay = parseFloat(document.getElementById('calcFood').value) || 0;
+  const people = parseInt(document.getElementById('calcPeople').value) || 1;
+
+  const fuelCost = (distance / mileage) * fuelPrice;
+  const driverCost = driverFee * days;
+  const nights = Math.max(days - 1, 0);
+  const hotelCost = hotelPerNight * nights;
+  const foodCost = foodPerDay * days * people;
+  const total = fuelCost + driverCost + hotelCost + foodCost;
+
+  document.getElementById('calcResult').innerHTML =
+    '<div class="calc-row"><span>⛽ Fuel Cost (' + distance + 'km ÷ ' + mileage + 'km/l × ₹' + fuelPrice + ')</span><span>₹' + fuelCost.toFixed(0) + '</span></div>' +
+    '<div class="calc-row"><span>🧑‍✈️ Driver Fee (' + days + ' days)</span><span>₹' + driverCost.toFixed(0) + '</span></div>' +
+    '<div class="calc-row"><span>🏨 Hotel (' + nights + ' nights)</span><span>₹' + hotelCost.toFixed(0) + '</span></div>' +
+    '<div class="calc-row"><span>🍽 Food (' + people + ' people × ' + days + ' days)</span><span>₹' + foodCost.toFixed(0) + '</span></div>' +
+    '<div class="calc-row calc-total"><span>Total Estimated Cost</span><span>₹' + total.toFixed(0) + '</span></div>';
+  document.getElementById('calcResultBox').style.display = 'block';
+}
+
+// ── DRIVER BOOKING ──
+function bookDriver(name){
+  window.open('https://wa.me/917832042517?text=' + encodeURIComponent('Hi! I want to book driver ' + name + ' for my trip.'), '_blank');
+}
+
+// ── BOOKING FORM (real capture, visible to admin) ──
+async function saveRecord(kind, data){
+  const collectionMap = { booking:'bookings', contact:'leads', activity:'activity', issue:'issues' };
+  if(firebaseConfigured){
+    await db.collection(collectionMap[kind]).add(Object.assign({}, data, { ts: Date.now() }));
+    return;
+  }
+  const key = kind + ':' + Date.now() + (kind === 'activity' ? (':' + Math.random().toString(36).slice(2,7)) : '');
+  await safeSet(key, JSON.stringify(Object.assign({}, data, { ts: Date.now() })), true);
+}
+
+async function confirmBooking(){
+  const name = document.getElementById('bkName').value.trim();
+  const phone = document.getElementById('bkPhone').value.trim();
+  const email = document.getElementById('bkEmail').value.trim();
+  const travellers = document.getElementById('bkTravellers').value.trim();
+  const date = document.getElementById('bkDate').value;
+  const tour = document.getElementById('modalTourName').textContent;
+  const msgEl = document.getElementById('bkMsg');
+  if(!name || !phone){ msgEl.style.color = '#f87171'; msgEl.textContent = 'Naam aur mobile number zaroori hai.'; return; }
+  try{
+    await saveRecord('booking', {name:name, phone:phone, email:email||'—', tour:tour, travellers:travellers||'1', date:date||'—'});
+    logActivity('📅','New Booking', name + ' — ' + tour);
+  }catch(e){}
+  window.open('https://wa.me/917832042517?text=' + encodeURIComponent('Booking request: ' + tour + ' — Name: ' + name + ', Phone: ' + phone + ', Travellers: ' + (travellers||'1')), '_blank');
+  msgEl.style.color = '#4ade80'; msgEl.textContent = 'Booking request save ho gaya! WhatsApp khul raha hai…';
+}
+
+// ── CONTACT FORM (real capture, visible to admin) ──
+async function submitContactForm(){
+  const name = document.getElementById('ctName').value.trim();
+  const phone = document.getElementById('ctPhone').value.trim();
+  const dest = document.getElementById('ctDest').value.trim();
+  const msg = document.getElementById('ctMsg').value.trim();
+  const msgEl = document.getElementById('ctFormMsg');
+  if(!name || !phone){ msgEl.style.color = '#f87171'; msgEl.textContent = 'Naam aur mobile number zaroori hai.'; return; }
+  try{
+    await saveRecord('contact', {name:name, phone:phone, destination:dest||'—', message:msg||'—'});
+    logActivity('📬','New Lead', name + ' — ' + (dest||'General enquiry'));
+  }catch(e){}
+  window.open('https://wa.me/917832042517?text=' + encodeURIComponent('Hi HimYatra! ' + name + ' here. Interested in: ' + (dest||'a trip') + '. ' + (msg||'')), '_blank');
+  msgEl.style.color = '#4ade80'; msgEl.textContent = 'Bhej diya! WhatsApp khul raha hai…';
+}
+
+// ── ACTIVITY LOGGING (used by all AI employees + forms) ──
+async function logActivity(icon, label, summary){
+  try{
+    await saveRecord('activity', {icon:icon, bot:label, summary:summary});
+  }catch(e){}
+}
+
+// ── ADMIN PANEL (separate interface) ──
+function esc(s){
+  if(s === undefined || s === null) return '';
+  return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; });
+}
+
+function enterAdminMode(){
+  document.getElementById('adminPasscodeInput').value = '';
+  document.getElementById('adminEmailInput').value = '';
+  document.getElementById('adminFbPasswordInput').value = '';
+  const msgEl = document.getElementById('adminPasscodeMsg');
+  msgEl.textContent = '';
+  const descEl = document.getElementById('adminAccessDesc');
+  const btnEl = document.getElementById('adminAccessBtn');
+  if(firebaseConfigured){
+    document.getElementById('adminPasscodeInput').style.display = 'none';
+    document.getElementById('adminEmailInput').style.display = 'block';
+    document.getElementById('adminFbPasswordInput').style.display = 'block';
+    descEl.textContent = 'Log in with your admin account to open the Control Panel.';
+    btnEl.setAttribute('onclick', 'adminFirebaseLogin()');
+  } else {
+    document.getElementById('adminPasscodeInput').style.display = 'block';
+    document.getElementById('adminEmailInput').style.display = 'none';
+    document.getElementById('adminFbPasswordInput').style.display = 'none';
+    descEl.textContent = 'Enter the admin passcode to open the Control Panel.';
+    btnEl.setAttribute('onclick', 'checkAdminPasscode()');
+  }
+  openModalEl('adminPasscodeModal');
+  setTimeout(function(){
+    const inp = firebaseConfigured ? document.getElementById('adminEmailInput') : document.getElementById('adminPasscodeInput');
+    if(inp) inp.focus();
+  }, 150);
+}
+function showAdminApp(){
+  closeModalEl('adminPasscodeModal');
+  Array.from(document.body.children).forEach(function(child){
+    if(child.id !== 'adminApp') child.style.display = 'none';
+  });
+  document.getElementById('adminApp').style.display = 'block';
+  window.scrollTo(0,0);
+  loadAdminData();
+}
+function checkAdminPasscode(){
+  const code = document.getElementById('adminPasscodeInput').value;
+  const msgEl = document.getElementById('adminPasscodeMsg');
+  if(code !== 'navdeep123'){ msgEl.style.color = '#f87171'; msgEl.textContent = 'Galat passcode, dobara try karein.'; return; }
+  showAdminApp();
+}
+async function adminFirebaseLogin(){
+  const email = document.getElementById('adminEmailInput').value.trim().toLowerCase();
+  const password = document.getElementById('adminFbPasswordInput').value;
+  const msgEl = document.getElementById('adminPasscodeMsg');
+  msgEl.style.color = '#f87171';
+  if(!email || !password){ msgEl.textContent = 'Email aur password dono bharein.'; return; }
+  try{
+    await auth.signInWithEmailAndPassword(email, password);
+    if(auth.currentUser.email.toLowerCase() !== ADMIN_EMAIL.toLowerCase()){
+      await auth.signOut();
+      msgEl.textContent = 'Ye account admin nahi hai.';
+      return;
+    }
+    showAdminApp();
+  }catch(e){ msgEl.textContent = friendlyFirebaseError(e); }
+}
+function exitAdminMode(){
+  document.getElementById('adminApp').style.display = 'none';
+  Array.from(document.body.children).forEach(function(child){
+    if(child.id !== 'adminApp') child.style.display = '';
+  });
+  window.scrollTo(0,0);
+  if(firebaseConfigured && auth.currentUser && auth.currentUser.email.toLowerCase() === ADMIN_EMAIL.toLowerCase()){
+    auth.signOut();
+  }
+}
+
+async function listRecords(prefix){
+  try{
+    const result = await safeList(prefix, true);
+    if(!result || !result.keys || !result.keys.length) return [];
+    const items = [];
+    for(const key of result.keys){
+      try{
+        const rec = await safeGet(key, true);
+        if(rec){
+          const parsed = JSON.parse(rec.value);
+          parsed._key = key;
+          items.push(parsed);
+        }
+      }catch(e){}
+    }
+    return items;
+  }catch(e){ return []; }
+}
+
+async function listCollection(name){
+  try{
+    const snap = await db.collection(name).get();
+    return snap.docs.map(function(d){ const data = d.data(); data._key = d.id; return data; });
+  }catch(e){ console.error('listCollection failed:', name, e); return []; }
+}
+
+let adminData = { customers:[], drivers:[], bookings:[], leads:[], issues:[], activity:[] };
+
+async function loadAdminData(){
+  ['customers','drivers','bookings','leads','issues','activity'].forEach(function(t){
+    document.getElementById('adminPanel-'+t).innerHTML = '<div class="admin-empty">Loading…</div>';
+  });
+  if(firebaseConfigured){
+    adminData.customers = await listCollection('customers');
+    adminData.drivers = await listCollection('drivers');
+    adminData.bookings = await listCollection('bookings');
+    adminData.leads = await listCollection('leads');
+    adminData.issues = await listCollection('issues');
+    adminData.activity = await listCollection('activity');
+  } else {
+    adminData.customers = await listRecords('customer:');
+    adminData.drivers = await listRecords('driver:');
+    adminData.bookings = await listRecords('booking:');
+    adminData.leads = await listRecords('contact:');
+    adminData.issues = await listRecords('issue:');
+    adminData.activity = await listRecords('activity:');
+  }
+  adminData.bookings.sort(function(a,b){ return (b.ts||0)-(a.ts||0); });
+  adminData.leads.sort(function(a,b){ return (b.ts||0)-(a.ts||0); });
+  adminData.issues.sort(function(a,b){ return (b.ts||0)-(a.ts||0); });
+  adminData.activity.sort(function(a,b){ return (b.ts||0)-(a.ts||0); });
+  renderAdminStats();
+  renderAdminTables();
+  const noteEl = document.getElementById('storageModeNote');
+  if(noteEl){
+    if(firebaseConfigured){
+      noteEl.innerHTML = '🟢 Firebase connected — real, secure data (this is the production backend).' + (aiBackendConfigured ? ' AI employees running through your Cloud Function.' : ' ⚠️ AI employees still using preview mode — CLOUD_FUNCTION_URL not set yet.');
+    } else if(window.__storageMode === 'live'){
+      noteEl.innerHTML = '🟡 Demo mode — Claude preview storage (not Firebase yet). Data syncs across visitors only while previewing inside Claude.';
+    } else {
+      noteEl.innerHTML = '🟡 Demo mode, local-only — this browser tab only. Fill in FIREBASE_CONFIG for real, permanent data.';
+    }
+  }
+}
+
+function statCard(num, label){
+  return '<div class="stat-card"><div class="stat-num">' + num + '</div><div class="stat-lbl">' + label + '</div></div>';
+}
+
+function renderAdminStats(){
+  const openIssues = adminData.issues.filter(function(i){ return i.status !== 'Resolved'; }).length;
+  document.getElementById('adminStatsGrid').innerHTML =
+    statCard(adminData.customers.length, 'Customers') +
+    statCard(adminData.drivers.length, 'Drivers') +
+    statCard(adminData.bookings.length, 'Bookings') +
+    statCard(adminData.leads.length, 'Leads') +
+    statCard(openIssues, 'Open Issues') +
+    statCard(adminData.activity.length, 'AI Queries');
+}
+
+function renderAdminTables(){
+  document.getElementById('adminPanel-customers').innerHTML = adminData.customers.length ?
+    '<div class="admin-table-wrap"><table class="admin-table"><tr><th>Name</th><th>Email</th><th>Phone</th></tr>' +
+    adminData.customers.map(function(c){ return '<tr><td>'+esc(c.name)+'</td><td>'+esc(c.email)+'</td><td>'+esc(c.phone)+'</td></tr>'; }).join('') +
+    '</table></div>' : '<div class="admin-empty">Koi customer signup nahi hua abhi tak.</div>';
+
+  document.getElementById('adminPanel-drivers').innerHTML = adminData.drivers.length ?
+    '<div class="admin-table-wrap"><table class="admin-table"><tr><th>Name</th><th>City</th><th>Vehicle</th><th>License</th><th>Status</th><th></th></tr>' +
+    adminData.drivers.map(function(d){
+      const verified = d.status === 'Verified';
+      return '<tr><td>'+esc(d.name)+'</td><td>'+esc(d.city)+'</td><td>'+esc(d.vehicle)+'</td><td>'+esc(d.license)+'</td><td><span class="'+(verified?'badge-verified':'badge-pending')+'">'+(verified?'Verified':'Pending')+'</span></td><td>'+(verified?'':'<button class="btn-mini" onclick="verifyDriver(\''+esc(d._key)+'\')">Verify</button>')+'</td></tr>';
+    }).join('') + '</table></div>' : '<div class="admin-empty">Koi driver signup nahi hua abhi tak.</div>';
+
+  document.getElementById('adminPanel-bookings').innerHTML = adminData.bookings.length ?
+    '<div class="admin-table-wrap"><table class="admin-table"><tr><th>Name</th><th>Phone</th><th>Tour</th><th>Travellers</th><th>Date</th></tr>' +
+    adminData.bookings.map(function(b){ return '<tr><td>'+esc(b.name)+'</td><td>'+esc(b.phone)+'</td><td>'+esc(b.tour)+'</td><td>'+esc(b.travellers)+'</td><td>'+esc(b.date)+'</td></tr>'; }).join('') +
+    '</table></div>' : '<div class="admin-empty">Koi booking nahi aayi abhi tak.</div>';
+
+  document.getElementById('adminPanel-leads').innerHTML = adminData.leads.length ?
+    '<div class="admin-table-wrap"><table class="admin-table"><tr><th>Name</th><th>Phone</th><th>Destination</th><th>Message</th></tr>' +
+    adminData.leads.map(function(l){ return '<tr><td>'+esc(l.name)+'</td><td>'+esc(l.phone)+'</td><td>'+esc(l.destination)+'</td><td>'+esc(l.message)+'</td></tr>'; }).join('') +
+    '</table></div>' : '<div class="admin-empty">Koi contact form lead nahi hai abhi tak.</div>';
+
+  document.getElementById('adminPanel-issues').innerHTML = adminData.issues.length ?
+    '<div class="admin-table-wrap"><table class="admin-table"><tr><th>Reported By</th><th>Message</th><th>Status</th><th></th></tr>' +
+    adminData.issues.map(function(i){
+      const resolved = i.status === 'Resolved';
+      return '<tr><td>'+esc(i.reporterType)+'</td><td>'+esc(i.message)+'</td><td><span class="'+(resolved?'badge-resolved':'badge-open')+'">'+(resolved?'Resolved':'Open')+'</span></td><td>'+(resolved?'':'<button class="btn-mini" onclick="resolveIssue(\''+esc(i._key)+'\')">Mark Resolved</button>')+'</td></tr>';
+    }).join('') + '</table></div>' : '<div class="admin-empty">Koi open issue nahi hai. 🎉</div>';
+
+  document.getElementById('adminPanel-activity').innerHTML = adminData.activity.length ?
+    '<div class="dashboard-activity">' + adminData.activity.slice(0,40).map(function(a){ return '<div class="activity-item">'+esc(a.icon||'🤖')+' <strong>'+esc(a.bot)+'</strong> — '+esc(a.summary)+'</div>'; }).join('') + '</div>' :
+    '<div class="admin-empty">Abhi tak koi AI activity nahi hui.</div>';
+}
+
+function showAdminTab(tab){
+  ['customers','drivers','bookings','leads','issues','activity'].forEach(function(t){
+    document.getElementById('adminPanel-'+t).classList.toggle('active', t === tab);
+  });
+  document.querySelectorAll('#adminTabsBar .auth-tab').forEach(function(btn){
+    btn.classList.toggle('active', btn.getAttribute('data-tab') === tab);
+  });
+}
+
+async function verifyDriver(key){
+  try{
+    if(firebaseConfigured){
+      await db.collection('drivers').doc(key).update({ status: 'Verified' });
+      const docSnap = await db.collection('drivers').doc(key).get();
+      logActivity('✅','FleetBot', 'Verified driver ' + (docSnap.exists ? docSnap.data().name : ''));
+    } else {
+      const rec = await safeGet(key, true);
+      if(!rec) return;
+      const data = JSON.parse(rec.value);
+      data.status = 'Verified';
+      await safeSet(key, JSON.stringify(data), true);
+      logActivity('✅','FleetBot', 'Verified driver ' + data.name);
+    }
+    loadAdminData();
+  }catch(e){ showAdminNote('Error updating driver: ' + (e && e.message ? e.message : 'unknown')); }
+}
+
+async function resolveIssue(key){
+  try{
+    if(firebaseConfigured){
+      await db.collection('issues').doc(key).update({ status: 'Resolved' });
+    } else {
+      const rec = await safeGet(key, true);
+      if(!rec) return;
+      const data = JSON.parse(rec.value);
+      data.status = 'Resolved';
+      await safeSet(key, JSON.stringify(data), true);
+    }
+    loadAdminData();
+  }catch(e){ showAdminNote('Error updating issue: ' + (e && e.message ? e.message : 'unknown')); }
+}
+function showAdminNote(text){
+  const noteEl = document.getElementById('storageModeNote');
+  if(noteEl) noteEl.innerHTML = '🔴 ' + text;
+}
+
+async function sendOwnerReport(){
+  await loadAdminData();
+  const openIssues = adminData.issues.filter(function(i){ return i.status !== 'Resolved'; }).length;
+  const msg = '📊 HimYatra Report\n\n👥 Customers: ' + adminData.customers.length + '\n🚖 Drivers: ' + adminData.drivers.length + '\n📅 Bookings: ' + adminData.bookings.length + '\n📬 Leads: ' + adminData.leads.length + '\n⚠️ Open Issues: ' + openIssues + '\n🤖 AI Queries Handled: ' + adminData.activity.length + '\n\nGenerated for Navdeep Samkaria, Founder — HimYatra';
+  window.open('https://wa.me/917832042517?text=' + encodeURIComponent(msg), '_blank');
+}
+
+// ── AI EMPLOYEES ──
+const SYSTEM_PROMPTS = {
+  social: "You are SocialBot, HimYatra's social media manager. HimYatra is a Himalayan travel company (Ladakh, Manali, Spiti, Kasol, Dharamshala, Shimla) with a verified driver network in Himachal & Chandigarh. Create catchy Instagram captions, Facebook posts, reel scripts, hashtag sets, and content calendars for Indian travel audiences. Use relevant emojis. Keep responses concise — 2-4 sentences unless asked for more.",
+  legal: "You are LexBot, a legal advisor for HimYatra, a Himalayan travel company in India. Answer questions about inner line permits, Rohtang Pass permits, consumer protection, GST for travel businesses, refund policy legality, tour operator registration, forest/camping permissions, police NOC for treks, and driver/cab compliance. Be clear and practical. Always note you provide general guidance, not formal legal advice.",
+  resolve: "You are ResolveBot, HimYatra's real-time issue resolution assistant. You handle complaints from BOTH customers (delayed pickup, hotel issues, refund requests) AND drivers (payment delays, route issues, customer disputes, vehicle problems). Acknowledge the issue with empathy, ask clarifying questions if needed, and propose a clear next step. For urgent/safety issues, tell them to also call/WhatsApp the HimYatra team directly at +91 78320 42517. Keep responses practical and reassuring, 2-4 sentences.",
+  fleet: "You are FleetBot, HimYatra's driver management assistant, covering Himachal Pradesh & Chandigarh. Help with driver onboarding questions, document requirements (driving license, RC, insurance, permit — never ask for Aadhaar number in chat), vehicle eligibility, payout/settlement queries, and trip assignment. Be clear, professional and simple, since not all drivers are highly tech-familiar. Keep responses 2-4 sentences unless more detail is asked.",
+  fare: "You are FareBot, HimYatra's trip cost assistant for Himachal Pradesh & Ladakh routes. Help travellers estimate total trip costs using fuel price, distance, vehicle mileage, driver fees, hotel and food costs. Ask for missing numbers if needed, then give a clear practical estimate with a brief breakdown. Note that fuel prices change daily and should be confirmed before booking. Keep responses concise.",
+  travel: "You are HimBot, HimYatra's expert Himalayan travel guide. Answer questions about Ladakh, Manali, Spiti Valley, Kasol, Dharamshala, Shimla and all of Himachal Pradesh & Ladakh. Help with best travel times, route planning, permit requirements, packing lists, altitude sickness prevention, budget estimates, local food, accommodation tips, and full itineraries. Be friendly and specific. Keep replies helpful and concise.",
+  boss: "You are BossBot, the executive assistant AI for Navdeep Samkaria, Founder of HimYatra. You are given a live snapshot of the business below (customers, drivers, bookings, leads, open issues, recent AI employee activity). Your job: (1) give Navdeep a clear, short overview of what's happening right now, (2) proactively flag anything that needs urgent attention, and say which bot or role should own it next (e.g. 'FleetBot should verify this driver today', 'ResolveBot ticket from a driver needs a callback'), (3) when asked for a 'report' or 'brief', reply in a short scannable format (a few bullet-style lines), not long prose. Be direct and business-focused, in Hinglish if Navdeep writes in Hinglish. Never invent numbers beyond the snapshot given to you."
+};
+
+const conversations = { social: [], legal: [], resolve: [], fleet: [], fare: [], travel: [], boss: [] };
+
+function buildBossBotContext(){
+  const openIssues = adminData.issues.filter(function(i){ return i.status !== 'Resolved'; });
+  const pendingDrivers = adminData.drivers.filter(function(d){ return d.status !== 'Verified'; });
+  let ctx = 'LIVE BUSINESS SNAPSHOT (right now):\n';
+  ctx += '- Customers signed up: ' + adminData.customers.length + '\n';
+  ctx += '- Drivers: ' + adminData.drivers.length + ' total, ' + pendingDrivers.length + ' pending verification' + (pendingDrivers.length ? (' (' + pendingDrivers.map(function(d){ return d.name; }).join(', ') + ')') : '') + '\n';
+  ctx += '- Bookings: ' + adminData.bookings.length + '\n';
+  ctx += '- Contact-form leads: ' + adminData.leads.length + '\n';
+  ctx += '- Open issues: ' + openIssues.length + (openIssues.length ? ('\n  ' + openIssues.slice(0,6).map(function(i){ return '• [' + i.reporterType + '] ' + i.message; }).join('\n  ')) : '') + '\n';
+  ctx += '- Recent AI activity (latest first): ' + (adminData.activity.length ? ('\n  ' + adminData.activity.slice(0,8).map(function(a){ return '• ' + a.bot + ': ' + a.summary; }).join('\n  ')) : 'none yet') + '\n';
+  return ctx;
+}
+function askBossBotBrief(){
+  document.getElementById('bossInput').value = 'Aaj ka poora brief report do — kya urgent hai aur kise kya karna chahiye.';
+  sendEmployee('boss');
+}
+
+async function sendEmployee(type){
+  const inputEl = document.getElementById(type + 'Input');
+  const msgsEl = document.getElementById(type + 'Msgs');
+  const userText = inputEl.value.trim();
+  if(!userText) return;
+
+  const isFullWidth = (type === 'travel');
+  const userMsg = document.createElement('div');
+  if(isFullWidth){
+    userMsg.className = 'msg';
+    userMsg.innerHTML = '<div class="msg-user"></div>';
+    userMsg.querySelector('.msg-user').textContent = userText;
+  } else {
+    userMsg.className = 'emp-msg-user';
+    userMsg.textContent = userText;
+  }
+  msgsEl.appendChild(userMsg);
+  inputEl.value = '';
+
+  const typing = document.createElement('div');
+  if(isFullWidth){
+    typing.className = 'msg';
+    typing.innerHTML = '<div class="msg-bot"><span style="opacity:0.6">Typing…</span></div>';
+  } else {
+    typing.className = 'emp-msg-bot';
+    typing.innerHTML = '<span style="opacity:0.6">Typing…</span>';
+  }
+  msgsEl.appendChild(typing);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+
+  conversations[type].push({ role: 'user', content: userText });
+
+  if(type === 'boss'){ await loadAdminData(); }
+  const systemPrompt = (type === 'boss') ? (SYSTEM_PROMPTS.boss + '\n\n' + buildBossBotContext()) : SYSTEM_PROMPTS[type];
+
+  try{
+    const endpoint = aiBackendConfigured ? CLOUD_FUNCTION_URL : 'https://api.anthropic.com/v1/messages';
+    const res = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 1000, system: systemPrompt, messages: conversations[type] })
+    });
+    if(!res.ok){
+      let bodyText = '';
+      try{ bodyText = await res.text(); }catch(e2){}
+      throw new Error('HTTP ' + res.status + (bodyText ? (' — ' + bodyText.slice(0,120)) : ''));
+    }
+    const data = await res.json();
+    const reply = data.content && data.content[0] ? data.content[0].text : 'Sorry, I could not respond right now.';
+    conversations[type].push({ role: 'assistant', content: reply });
+    if(isFullWidth){ typing.querySelector('.msg-bot').innerHTML = reply.replace(/\n/g, '<br>'); }
+    else{ typing.innerHTML = reply.replace(/\n/g, '<br>'); }
+
+    const botMeta = { social:['📸','SocialBot'], legal:['⚖️','LexBot'], resolve:['🛠️','ResolveBot'], fleet:['🚖','FleetBot'], fare:['🧮','FareBot'], travel:['🏔','HimBot'], boss:['🧑‍💻','BossBot'] }[type];
+    if(type !== 'boss') logActivity(botMeta[0], botMeta[1], userText.slice(0,80));
+
+    if(type === 'resolve'){
+      const reporterSel = document.getElementById('resolveReporterType');
+      const reporterType = reporterSel ? reporterSel.value : 'Customer';
+      try{
+        await saveRecord('issue', {reporterType:reporterType, message:userText, status:'Open'});
+      }catch(e){}
+    }
+  }catch(e){
+    const hint = aiBackendConfigured ? 'Cloud Function check karein (deploy hui hai? URL sahi hai?).' : 'Ye abhi sirf Claude ke andar preview karte waqt kaam karta hai — deploy karne ke baad CLOUD_FUNCTION_URL fill karein.';
+    const errText = 'Connection error: ' + (e && e.message ? e.message : 'unknown') + '. ' + hint;
+    if(isFullWidth){ typing.querySelector('.msg-bot').innerHTML = errText; }
+    else{ typing.innerHTML = errText; }
+  }
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+}
+
+['social','legal','resolve','fleet','fare','travel','boss'].forEach(function(type){
+  document.getElementById(type + 'Input').addEventListener('keydown', function(e){
+    if(e.key === 'Enter') sendEmployee(type);
+  });
+});
+document.getElementById('adminPasscodeInput').addEventListener('keydown', function(e){
+  if(e.key === 'Enter') checkAdminPasscode();
+});
+</script>
+
+</body>
+</html>
